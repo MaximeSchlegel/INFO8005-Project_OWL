@@ -26,7 +26,7 @@ public class App {
 
         mFactory.inferredSubClass();
         //Save OWL File
-//        mFactory.saveOntologyLocal("src/main/resources/JOVTEST2.owl");
+        mFactory.saveOntologyLocal("src/main/resources/JOVTEST2.owl");
 
 
     }
