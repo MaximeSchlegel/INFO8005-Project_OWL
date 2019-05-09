@@ -1,0 +1,534 @@
+Prefix(:=<http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(time:=<http://www.w3.org/2006/time#>)
+
+
+Ontology(<http://www.uliege.be/ontologies/2019/2/JO>
+<http://www.uliege.be/ontologies/2019/2/JO/1.0>
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Chauvin & Schlegel & Mamassi"^^xsd:string)
+Annotation(rdfs:label "Project 2019 Semantic Data"^^xsd:string)
+Annotation(owl:priorVersion "1.0"^^xsd:float)
+
+Declaration(Class(<#subtest>))
+Declaration(Class(<#test>))
+Declaration(Class(:Athletic))
+Declaration(Class(:Country))
+Declaration(Class(:Delegation))
+Declaration(Class(:Discipline))
+Declaration(Class(:Event))
+Declaration(Class(:Event_Date))
+Declaration(Class(:Event_Place))
+Declaration(Class(:JO))
+Declaration(Class(:Match))
+Declaration(Class(:Ordeal))
+Declaration(Class(:Participant))
+Declaration(Class(:Record))
+Declaration(Class(:Record_Date))
+Declaration(Class(:Record_Score))
+Declaration(Class(:Record_Time))
+Declaration(Class(:Result))
+Declaration(Class(:Sponsor))
+Declaration(Class(:Sport))
+Declaration(Class(:Team))
+Declaration(Class(time:DataTimeDescription))
+Declaration(ObjectProperty(:Associate))
+Declaration(ObjectProperty(:Attend))
+Declaration(ObjectProperty(:Belong))
+Declaration(ObjectProperty(:Compose))
+Declaration(ObjectProperty(:ComposeBy))
+Declaration(ObjectProperty(:DisciplineOf))
+Declaration(ObjectProperty(:From))
+Declaration(ObjectProperty(:HappenDate))
+Declaration(ObjectProperty(:HappenPlace))
+Declaration(ObjectProperty(:HasDiscipline))
+Declaration(ObjectProperty(:Have))
+Declaration(ObjectProperty(:IsDisciplineOf))
+Declaration(ObjectProperty(:IsPartOf))
+Declaration(ObjectProperty(:OriginateFrom))
+Declaration(ObjectProperty(:RecordDate))
+Declaration(ObjectProperty(:RecordOf))
+Declaration(ObjectProperty(:RecordParticipant))
+Declaration(ObjectProperty(:Represent))
+Declaration(ObjectProperty(:ResultMatch))
+Declaration(ObjectProperty(:ResultParticipant))
+Declaration(ObjectProperty(:SponsedBy))
+Declaration(ObjectProperty(:Sponsors))
+Declaration(DataProperty(:Id))
+Declaration(DataProperty(:Rule))
+Declaration(DataProperty(:abandon))
+Declaration(DataProperty(:age))
+Declaration(DataProperty(:birthdate))
+Declaration(DataProperty(:city))
+Declaration(DataProperty(:country))
+Declaration(DataProperty(:date))
+Declaration(DataProperty(:name))
+Declaration(DataProperty(:rank))
+Declaration(DataProperty(:score))
+Declaration(DataProperty(:sexe))
+Declaration(NamedIndividual(:Athlete1))
+Declaration(NamedIndividual(:Country1))
+Declaration(NamedIndividual(:Country2))
+Declaration(NamedIndividual(:Country3))
+Declaration(NamedIndividual(:Country4))
+Declaration(NamedIndividual(:Country5))
+Declaration(NamedIndividual(:Country6))
+Declaration(NamedIndividual(:Country7))
+Declaration(NamedIndividual(:Country8))
+Declaration(NamedIndividual(:Country9))
+Declaration(NamedIndividual(:Discipline1))
+Declaration(NamedIndividual(:Discipline2))
+Declaration(NamedIndividual(:JO2012))
+Declaration(NamedIndividual(:JO2016))
+Declaration(NamedIndividual(:Match1))
+Declaration(NamedIndividual(:Ordeal1))
+Declaration(NamedIndividual(:Ordeal2))
+Declaration(NamedIndividual(:Sponsor1))
+Declaration(NamedIndividual(:Sponsor2))
+Declaration(NamedIndividual(:Sponsor3))
+Declaration(NamedIndividual(:Sponsor4))
+Declaration(NamedIndividual(:Sponsor5))
+Declaration(NamedIndividual(:Sponsor6))
+Declaration(NamedIndividual(:Sport1))
+Declaration(NamedIndividual(:Sport2))
+Declaration(NamedIndividual(:Sport3))
+Declaration(NamedIndividual(:Sport4))
+Declaration(NamedIndividual(:Team1))
+Declaration(NamedIndividual(:Team2))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/creator>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :Associate (:Associate)
+
+ObjectPropertyDomain(:Associate ObjectUnionOf(:Discipline :Ordeal))
+ObjectPropertyRange(:Associate ObjectUnionOf(:Discipline :Ordeal))
+
+# Object Property: :Attend (:Attend)
+
+ObjectPropertyDomain(:Attend :Delegation)
+ObjectPropertyRange(:Attend :JO)
+
+# Object Property: :Belong (:Belong)
+
+ObjectPropertyDomain(:Belong :Event_Place)
+ObjectPropertyRange(:Belong :Country)
+
+# Object Property: :Compose (:Compose)
+
+InverseObjectProperties(:Compose :ComposeBy)
+ObjectPropertyDomain(:Compose :Athletic)
+ObjectPropertyRange(:Compose :Team)
+
+# Object Property: :ComposeBy (:ComposeBy)
+
+ObjectPropertyDomain(:ComposeBy :Team)
+ObjectPropertyRange(:ComposeBy :Athletic)
+
+# Object Property: :DisciplineOf (:DisciplineOf)
+
+ObjectPropertyDomain(:DisciplineOf :Discipline)
+ObjectPropertyRange(:DisciplineOf :Sport)
+
+# Object Property: :From (:From)
+
+InverseObjectProperties(:From :OriginateFrom)
+ObjectPropertyDomain(:From :Participant)
+ObjectPropertyRange(:From :Country)
+
+# Object Property: :HappenDate (:HappenDate)
+
+ObjectPropertyDomain(:HappenDate :Event)
+ObjectPropertyRange(:HappenDate :Event_Date)
+
+# Object Property: :HappenPlace (:HappenPlace)
+
+ObjectPropertyDomain(:HappenPlace :Event)
+ObjectPropertyRange(:HappenPlace :Event_Place)
+
+# Object Property: :HasDiscipline (:HasDiscipline)
+
+InverseObjectProperties(:HasDiscipline :IsDisciplineOf)
+ObjectPropertyDomain(:HasDiscipline :Discipline)
+ObjectPropertyRange(:HasDiscipline :Sport)
+
+# Object Property: :Have (:Have)
+
+InverseObjectProperties(:Have :IsPartOf)
+ObjectPropertyDomain(:Have :Event)
+ObjectPropertyRange(:Have :Event)
+
+# Object Property: :IsDisciplineOf (:IsDisciplineOf)
+
+ObjectPropertyDomain(:IsDisciplineOf :Sport)
+ObjectPropertyRange(:IsDisciplineOf :Discipline)
+
+# Object Property: :IsPartOf (:IsPartOf)
+
+ObjectPropertyDomain(:IsPartOf :Event)
+ObjectPropertyRange(:IsPartOf :Event)
+
+# Object Property: :OriginateFrom (:OriginateFrom)
+
+ObjectPropertyDomain(:OriginateFrom :Country)
+ObjectPropertyRange(:OriginateFrom :Participant)
+
+# Object Property: :RecordDate (:RecordDate)
+
+ObjectPropertyDomain(:RecordDate :Record)
+ObjectPropertyRange(:RecordDate :Record_Date)
+
+# Object Property: :RecordOf (:RecordOf)
+
+ObjectPropertyDomain(:RecordOf :Discipline)
+ObjectPropertyRange(:RecordOf :Record)
+
+# Object Property: :RecordParticipant (:RecordParticipant)
+
+ObjectPropertyDomain(:RecordParticipant :Record)
+ObjectPropertyRange(:RecordParticipant :Participant)
+
+# Object Property: :Represent (:Represent)
+
+SubObjectPropertyOf(:Represent owl:topObjectProperty)
+ObjectPropertyDomain(:Represent :Delegation)
+ObjectPropertyRange(:Represent :Country)
+
+# Object Property: :ResultMatch (:ResultMatch)
+
+ObjectPropertyDomain(:ResultMatch ObjectUnionOf(:Match :Result))
+ObjectPropertyRange(:ResultMatch ObjectUnionOf(:Match :Result))
+
+# Object Property: :ResultParticipant (:ResultParticipant)
+
+SubObjectPropertyOf(:ResultParticipant owl:topObjectProperty)
+ObjectPropertyDomain(:ResultParticipant ObjectUnionOf(:Participant :Result))
+ObjectPropertyRange(:ResultParticipant ObjectUnionOf(:Participant :Result))
+
+# Object Property: :SponsedBy (:SponsedBy)
+
+InverseObjectProperties(:SponsedBy :Sponsors)
+ObjectPropertyDomain(:SponsedBy ObjectUnionOf(:Country :Event :Participant))
+ObjectPropertyRange(:SponsedBy :Sponsor)
+
+# Object Property: :Sponsors (:Sponsors)
+
+SubObjectPropertyOf(:Sponsors owl:topObjectProperty)
+ObjectPropertyDomain(:Sponsors :Sponsor)
+ObjectPropertyRange(:Sponsors ObjectUnionOf(:Country :Event :Participant))
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :Id (:Id)
+
+DataPropertyDomain(:Id :Event)
+DataPropertyRange(:Id xsd:int)
+
+# Data Property: :Rule (:Rule)
+
+DataPropertyDomain(:Rule :Discipline)
+DataPropertyRange(:Rule xsd:anyURI)
+
+# Data Property: :abandon (:abandon)
+
+DataPropertyDomain(:abandon :Result)
+DataPropertyRange(:abandon xsd:boolean)
+
+# Data Property: :age (:age)
+
+DataPropertyDomain(:age :Athletic)
+DataPropertyRange(:age xsd:integer)
+
+# Data Property: :birthdate (:birthdate)
+
+DataPropertyDomain(:birthdate :Athletic)
+DataPropertyRange(:birthdate xsd:dateTime)
+
+# Data Property: :city (:city)
+
+DataPropertyDomain(:city :Event)
+DataPropertyRange(:city xsd:string)
+
+# Data Property: :country (:country)
+
+DataPropertyDomain(:country :Event)
+DataPropertyRange(:country xsd:string)
+
+# Data Property: :date (:date)
+
+DataPropertyDomain(:date :Event)
+DataPropertyRange(:date xsd:dateTime)
+
+# Data Property: :name (:name)
+
+DataPropertyDomain(:name :Country)
+DataPropertyDomain(:name :Event)
+DataPropertyDomain(:name :Participant)
+DataPropertyDomain(:name :Sponsor)
+DataPropertyDomain(:name :Sport)
+DataPropertyRange(:name xsd:string)
+
+# Data Property: :rank (:rank)
+
+SubDataPropertyOf(:rank owl:topDataProperty)
+DataPropertyDomain(:rank :Result)
+DataPropertyRange(:rank xsd:integer)
+
+# Data Property: :score (:score)
+
+DataPropertyDomain(:score :Result)
+DataPropertyRange(:score DataUnionOf(xsd:dateTimeStamp xsd:integer))
+
+# Data Property: :sexe (:sexe)
+
+DataPropertyDomain(:sexe :Athletic)
+DataPropertyRange(:sexe xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <#subtest> (<#subtest>)
+
+SubClassOf(<#subtest> <#test>)
+
+# Class: :Athletic (:Athletic)
+
+SubClassOf(:Athletic :Participant)
+SubClassOf(:Athletic ObjectSomeValuesFrom(:Compose :Team))
+
+# Class: :Country (:Country)
+
+SubClassOf(:Country ObjectSomeValuesFrom(:OriginateFrom :Participant))
+SubClassOf(:Country ObjectSomeValuesFrom(:SponsedBy :Sponsor))
+
+# Class: :Discipline (:Discipline)
+
+SubClassOf(:Discipline ObjectSomeValuesFrom(:Associate :Ordeal))
+
+# Class: :Event (:Event)
+
+SubClassOf(:Event ObjectSomeValuesFrom(:SponsedBy :Sponsor))
+
+# Class: :Event_Date (:Event_Date)
+
+SubClassOf(:Event_Date time:DataTimeDescription)
+
+# Class: :JO (:JO)
+
+SubClassOf(:JO :Event)
+SubClassOf(:JO ObjectSomeValuesFrom(:Have :Ordeal))
+
+# Class: :Match (:Match)
+
+SubClassOf(:Match :Event)
+SubClassOf(:Match ObjectSomeValuesFrom(:ResultMatch :Result))
+SubClassOf(:Match ObjectExactCardinality(1 :IsPartOf :Ordeal))
+
+# Class: :Ordeal (:Ordeal)
+
+SubClassOf(:Ordeal :Event)
+SubClassOf(:Ordeal ObjectSomeValuesFrom(:Have :Match))
+SubClassOf(:Ordeal ObjectExactCardinality(1 :Associate :Discipline))
+SubClassOf(:Ordeal ObjectExactCardinality(1 :IsPartOf :JO))
+
+# Class: :Participant (:Participant)
+
+SubClassOf(:Participant ObjectSomeValuesFrom(:ResultParticipant :Result))
+SubClassOf(:Participant ObjectSomeValuesFrom(:SponsedBy :Sponsor))
+SubClassOf(:Participant ObjectExactCardinality(1 :From :Country))
+
+# Class: :Record_Score (:Record_Score)
+
+SubClassOf(:Record_Score :Record)
+
+# Class: :Record_Time (:Record_Time)
+
+SubClassOf(:Record_Time :Record)
+
+# Class: :Result (:Result)
+
+SubClassOf(:Result ObjectExactCardinality(1 :ResultMatch :Match))
+SubClassOf(:Result ObjectExactCardinality(1 :ResultParticipant :Participant))
+
+# Class: :Sponsor (:Sponsor)
+
+SubClassOf(:Sponsor ObjectSomeValuesFrom(:Sponsors :Country))
+SubClassOf(:Sponsor ObjectSomeValuesFrom(:Sponsors :Event))
+SubClassOf(:Sponsor ObjectSomeValuesFrom(:Sponsors :Participant))
+
+# Class: :Team (:Team)
+
+SubClassOf(:Team :Participant)
+SubClassOf(:Team ObjectMinCardinality(1 :ComposeBy :Athletic))
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :Athlete1 (:Athlete1)
+
+ClassAssertion(:Athletic :Athlete1)
+DataPropertyAssertion(:name :Athlete1 "Rafael NADAL"^^xsd:string)
+
+# Individual: :Country1 (:Country1)
+
+ClassAssertion(:Country :Country1)
+DataPropertyAssertion(:country :Country1 "Italy"^^xsd:string)
+
+# Individual: :Country2 (:Country2)
+
+ClassAssertion(:Country :Country2)
+DataPropertyAssertion(:country :Country2 "France"^^xsd:string)
+
+# Individual: :Country3 (:Country3)
+
+ClassAssertion(:Country :Country3)
+DataPropertyAssertion(:country :Country3 "Maroc"^^xsd:string)
+
+# Individual: :Country4 (:Country4)
+
+ClassAssertion(:Country :Country4)
+DataPropertyAssertion(:country :Country4 "united States"^^xsd:string)
+
+# Individual: :Country5 (:Country5)
+
+ClassAssertion(:Country :Country5)
+DataPropertyAssertion(:country :Country5 "Great Britain"^^xsd:string)
+
+# Individual: :Country6 (:Country6)
+
+ClassAssertion(:Country :Country6)
+DataPropertyAssertion(:country :Country6 "Japan"^^xsd:string)
+
+# Individual: :Country7 (:Country7)
+
+ClassAssertion(:Country :Country7)
+DataPropertyAssertion(:country :Country7 "Belgium"^^xsd:string)
+
+# Individual: :Country8 (:Country8)
+
+ClassAssertion(:Country :Country8)
+DataPropertyAssertion(:country :Country8 "China"^^xsd:string)
+
+# Individual: :Country9 (:Country9)
+
+ClassAssertion(:Country :Country9)
+DataPropertyAssertion(:country :Country9 "Australia"^^xsd:string)
+
+# Individual: :Discipline1 (:Discipline1)
+
+ClassAssertion(:Discipline :Discipline1)
+DataPropertyAssertion(:name :Discipline1 "Doubles"^^xsd:string)
+
+# Individual: :Discipline2 (:Discipline2)
+
+ClassAssertion(:Discipline :Discipline2)
+DataPropertyAssertion(:name :Discipline2 "Singles"^^xsd:string)
+
+# Individual: :JO2012 (:JO2012)
+
+DataPropertyAssertion(:Id :JO2012 "2"^^xsd:int)
+DataPropertyAssertion(:city :JO2012 "London"^^xsd:string)
+DataPropertyAssertion(:country :JO2012 "Great Britain"^^xsd:string)
+DataPropertyAssertion(:date :JO2012 "2012-07-27T00:00:00"^^xsd:dateTime)
+
+# Individual: :JO2016 (:JO2016)
+
+ClassAssertion(:JO :JO2016)
+DataPropertyAssertion(:Id :JO2016 "1"^^xsd:int)
+DataPropertyAssertion(:city :JO2016 "Rio de Janeiro"^^xsd:string)
+DataPropertyAssertion(:country :JO2016 "Brazil"^^xsd:string)
+DataPropertyAssertion(:date :JO2016 "2016-08-05T00:00:00"^^xsd:dateTime)
+
+# Individual: :Match1 (:Match1)
+
+ClassAssertion(:Match :Match1)
+DataPropertyAssertion(:Id :Match1 "1"^^xsd:int)
+DataPropertyAssertion(:city :Match1 "Rio de Janeiro"^^xsd:string)
+DataPropertyAssertion(:date :Match1 "2016-08-15T09:10:00"^^xsd:dateTime)
+DataPropertyAssertion(:name :Match1 "Match Double Men"^^xsd:string)
+
+# Individual: :Ordeal1 (:Ordeal1)
+
+ClassAssertion(:Ordeal :Ordeal1)
+DataPropertyAssertion(:sexe :Ordeal1 "Men"^^xsd:string)
+
+# Individual: :Ordeal2 (:Ordeal2)
+
+ClassAssertion(:Ordeal :Ordeal2)
+DataPropertyAssertion(:sexe :Ordeal2 "Women"^^xsd:string)
+
+# Individual: :Sponsor1 (:Sponsor1)
+
+ClassAssertion(:Sponsor :Sponsor1)
+DataPropertyAssertion(:name :Sponsor1 "CocaCola"^^xsd:string)
+
+# Individual: :Sponsor2 (:Sponsor2)
+
+ClassAssertion(:Sponsor :Sponsor2)
+DataPropertyAssertion(:name :Sponsor2 "VISA"^^xsd:string)
+
+# Individual: :Sponsor3 (:Sponsor3)
+
+ClassAssertion(:Sponsor :Sponsor3)
+DataPropertyAssertion(:name :Sponsor3 "General Electric"^^xsd:string)
+
+# Individual: :Sponsor4 (:Sponsor4)
+
+ClassAssertion(:Sponsor :Sponsor4)
+DataPropertyAssertion(:name :Sponsor4 "Intel"^^xsd:string)
+
+# Individual: :Sponsor5 (:Sponsor5)
+
+ClassAssertion(:Sponsor :Sponsor5)
+DataPropertyAssertion(:name :Sponsor5 "Samsung"^^xsd:string)
+
+# Individual: :Sponsor6 (:Sponsor6)
+
+ClassAssertion(:Sponsor :Sponsor6)
+DataPropertyAssertion(:name :Sponsor6 "AliBaba Group"^^xsd:string)
+
+# Individual: :Sport1 (:Sport1)
+
+ClassAssertion(:Sport :Sport1)
+DataPropertyAssertion(:name :Sport1 "Swimming"^^xsd:string)
+
+# Individual: :Sport2 (:Sport2)
+
+ClassAssertion(:Sport :Sport2)
+DataPropertyAssertion(:name :Sport2 "Boxing"^^xsd:string)
+
+# Individual: :Sport3 (:Sport3)
+
+ClassAssertion(:Sport :Sport3)
+DataPropertyAssertion(:name :Sport3 "Athletics"^^xsd:string)
+
+# Individual: :Sport4 (:Sport4)
+
+ClassAssertion(:Sport :Sport4)
+DataPropertyAssertion(:name :Sport4 "Tennis"^^xsd:string)
+
+# Individual: :Team1 (:Team1)
+
+ClassAssertion(:Team :Team1)
+DataPropertyAssertion(:name :Team1 "Pierre-Hugues Herbert & Nicolas Mahut"^^xsd:string)
+
+# Individual: :Team2 (:Team2)
+
+ClassAssertion(:Team :Team2)
+DataPropertyAssertion(:name :Team2 "Marc López & Rafael Nadal"^^xsd:string)
+
+
+)

@@ -1,0 +1,652 @@
+@prefix : <http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@base <http://www.uliege.be/ontologies/2019/2/JO> .
+
+<http://www.uliege.be/ontologies/2019/2/JO> rdf:type owl:Ontology ;
+                                             owl:versionIRI <http://www.uliege.be/ontologies/2019/2/JO/1.0> ;
+                                             <http://purl.org/dc/elements/1.1/creator> "Chauvin & Schlegel & Mamassi"^^xsd:string ;
+                                             rdfs:label "Project 2019 Semantic Data"^^xsd:string ;
+                                             owl:priorVersion "1.0"^^xsd:float .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Associate
+:Associate rdf:type owl:ObjectProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Discipline
+                                       :Ordeal
+                                     )
+                       ] ;
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( :Discipline
+                                      :Ordeal
+                                    )
+                      ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend
+:Attend rdf:type owl:ObjectProperty ;
+        rdfs:domain :Delegation ;
+        rdfs:range :JO .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Belong
+:Belong rdf:type owl:ObjectProperty ;
+        rdfs:domain :Event_Place ;
+        rdfs:range :Country .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compose
+:Compose rdf:type owl:ObjectProperty ;
+         owl:inverseOf :ComposeBy ;
+         rdfs:domain :Athletic ;
+         rdfs:range :Team .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ComposeBy
+:ComposeBy rdf:type owl:ObjectProperty ;
+           rdfs:domain :Team ;
+           rdfs:range :Athletic .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#DisciplineOf
+:DisciplineOf rdf:type owl:ObjectProperty ;
+              rdfs:domain :Discipline ;
+              rdfs:range :Sport .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#From
+:From rdf:type owl:ObjectProperty ;
+      owl:inverseOf :OriginateFrom ;
+      rdfs:domain :Participant ;
+      rdfs:range :Country .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#HappenDate
+:HappenDate rdf:type owl:ObjectProperty ;
+            rdfs:domain :Event ;
+            rdfs:range :Event_Date .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#HappenPlace
+:HappenPlace rdf:type owl:ObjectProperty ;
+             rdfs:domain :Event ;
+             rdfs:range :Event_Place .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#HasDiscipline
+:HasDiscipline rdf:type owl:ObjectProperty ;
+               owl:inverseOf :IsDisciplineOf ;
+               rdfs:domain :Discipline ;
+               rdfs:range :Sport .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Have
+:Have rdf:type owl:ObjectProperty ;
+      owl:inverseOf :IsPartOf ;
+      rdfs:domain :Event ;
+      rdfs:range :Event .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#IsDisciplineOf
+:IsDisciplineOf rdf:type owl:ObjectProperty ;
+                rdfs:domain :Sport ;
+                rdfs:range :Discipline .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#IsPartOf
+:IsPartOf rdf:type owl:ObjectProperty ;
+          rdfs:domain :Event ;
+          rdfs:range :Event .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#OriginateFrom
+:OriginateFrom rdf:type owl:ObjectProperty ;
+               rdfs:domain :Country ;
+               rdfs:range :Participant .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#RecordDate
+:RecordDate rdf:type owl:ObjectProperty ;
+            rdfs:domain :Record ;
+            rdfs:range :Record_Date .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#RecordOf
+:RecordOf rdf:type owl:ObjectProperty ;
+          rdfs:domain :Discipline ;
+          rdfs:range :Record .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#RecordParticipant
+:RecordParticipant rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Record ;
+                   rdfs:range :Participant .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent
+:Represent rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :Delegation ;
+           rdfs:range :Country .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch
+:ResultMatch rdf:type owl:ObjectProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Match
+                                         :Result
+                                       )
+                         ] ;
+             rdfs:range [ rdf:type owl:Class ;
+                          owl:unionOf ( :Match
+                                        :Result
+                                      )
+                        ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant
+:ResultParticipant rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :Participant
+                                               :Result
+                                             )
+                               ] ;
+                   rdfs:range [ rdf:type owl:Class ;
+                                owl:unionOf ( :Participant
+                                              :Result
+                                            )
+                              ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#SponsedBy
+:SponsedBy rdf:type owl:ObjectProperty ;
+           owl:inverseOf :Sponsors ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Country
+                                       :Event
+                                       :Participant
+                                     )
+                       ] ;
+           rdfs:range :Sponsor .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsors
+:Sponsors rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain :Sponsor ;
+          rdfs:range [ rdf:type owl:Class ;
+                       owl:unionOf ( :Country
+                                     :Event
+                                     :Participant
+                                   )
+                     ] .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Id
+:Id rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Event ;
+    rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Rule
+:Rule rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Discipline ;
+      rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#abandon
+:abandon rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Result ;
+         rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#age
+:age rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Athletic ;
+     rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#birthdate
+:birthdate rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Athletic ;
+           rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#city
+:city rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Event ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country
+:country rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Event ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#date
+:date rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Event ;
+      rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Country ,
+                  :Event ,
+                  :Participant ,
+                  :Sponsor ,
+                  :Sport ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#rank
+:rank rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :Result ;
+      rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#score
+:score rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Result ;
+       rdfs:range [ rdf:type rdfs:Datatype ;
+                    owl:unionOf ( xsd:dateTimeStamp
+                                  xsd:integer
+                                )
+                  ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#sexe
+:sexe rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Athletic ;
+      rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic
+:Athletic rdf:type owl:Class ;
+          rdfs:subClassOf :Participant ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :Compose ;
+                            owl:someValuesFrom :Team
+                          ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :OriginateFrom ;
+                           owl:someValuesFrom :Participant
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :SponsedBy ;
+                           owl:someValuesFrom :Sponsor
+                         ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation
+:Delegation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline
+:Discipline rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :Associate ;
+                              owl:someValuesFrom :Ordeal
+                            ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :SponsedBy ;
+                         owl:someValuesFrom :Sponsor
+                       ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event_Date
+:Event_Date rdf:type owl:Class ;
+            rdfs:subClassOf time:DataTimeDescription .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event_Place
+:Event_Place rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO
+:JO rdf:type owl:Class ;
+    rdfs:subClassOf :Event ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :Have ;
+                      owl:someValuesFrom :Ordeal
+                    ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match
+:Match rdf:type owl:Class ;
+       rdfs:subClassOf :Event ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :ResultMatch ;
+                         owl:someValuesFrom :Result
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :IsPartOf ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Ordeal
+                       ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal
+:Ordeal rdf:type owl:Class ;
+        rdfs:subClassOf :Event ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :Have ;
+                          owl:someValuesFrom :Match
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :Associate ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Discipline
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :IsPartOf ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :JO
+                        ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant
+:Participant rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :ResultParticipant ;
+                               owl:someValuesFrom :Result
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :SponsedBy ;
+                               owl:someValuesFrom :Sponsor
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :From ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :Country
+                             ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record
+:Record rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record_Date
+:Record_Date rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record_Score
+:Record_Score rdf:type owl:Class ;
+              rdfs:subClassOf :Record .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record_Time
+:Record_Time rdf:type owl:Class ;
+             rdfs:subClassOf :Record .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result
+:Result rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :ResultMatch ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Match
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :ResultParticipant ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Participant
+                        ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor
+:Sponsor rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :Sponsors ;
+                           owl:someValuesFrom :Country
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :Sponsors ;
+                           owl:someValuesFrom :Event
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :Sponsors ;
+                           owl:someValuesFrom :Participant
+                         ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport
+:Sport rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team
+:Team rdf:type owl:Class ;
+      rdfs:subClassOf :Participant ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :ComposeBy ;
+                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Athletic
+                      ] .
+
+
+###  http://www.w3.org/2006/time#DataTimeDescription
+time:DataTimeDescription rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country1
+:Country1 rdf:type owl:NamedIndividual ,
+                   :Country ;
+          :country "Italy"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country2
+:Country2 rdf:type owl:NamedIndividual ,
+                   :Country ;
+          :country "France"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country3
+:Country3 rdf:type owl:NamedIndividual ,
+                   :Country ;
+          :country "Maroc"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country4
+:Country4 rdf:type owl:NamedIndividual ,
+                   :Country ;
+          :country "united States"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country5
+:Country5 rdf:type owl:NamedIndividual ,
+                   :Country ;
+          :country "Great Britain"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country6
+:Country6 rdf:type owl:NamedIndividual ,
+                   :Country ;
+          :country "Japan"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country7
+:Country7 rdf:type owl:NamedIndividual ,
+                   :Country ;
+          :country "Belgium"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country8
+:Country8 rdf:type owl:NamedIndividual ,
+                   :Country ;
+          :country "China"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country9
+:Country9 rdf:type owl:NamedIndividual ,
+                   :Country ;
+          :country "Australia"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2012
+:JO2012 rdf:type owl:NamedIndividual ;
+        :Id "2"^^xsd:int ;
+        :city "London"^^xsd:string ;
+        :country "Great Britain"^^xsd:string ;
+        :date "2012-07-27T00:00:00"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016
+:JO2016 rdf:type owl:NamedIndividual ,
+                 :JO ;
+        :Id "1"^^xsd:int ;
+        :city "Rio de Janeiro"^^xsd:string ;
+        :country "Brazil"^^xsd:string ;
+        :date "2016-08-05T00:00:00"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor1
+:Sponsor1 rdf:type owl:NamedIndividual ,
+                   :Sponsor ;
+          :name "CocaCola"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor2
+:Sponsor2 rdf:type owl:NamedIndividual ,
+                   :Sponsor ;
+          :name "VISA"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor3
+:Sponsor3 rdf:type owl:NamedIndividual ,
+                   :Sponsor ;
+          :name "General Electric"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor4
+:Sponsor4 rdf:type owl:NamedIndividual ,
+                   :Sponsor ;
+          :name "Intel"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor5
+:Sponsor5 rdf:type owl:NamedIndividual ,
+                   :Sponsor ;
+          :name "Samsung"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor6
+:Sponsor6 rdf:type owl:NamedIndividual ,
+                   :Sponsor ;
+          :name "AliBaba Group"^^xsd:string .
+
+
+###  http://www.uliege.be/ontologies/2019/2/JO#Athlete1
+:Athlete1 rdf:type owl:NamedIndividual ,
+                   :Athletic ;
+          :name "Rafael NADAL"^^xsd:string .
+
+
+###  http://www.uliege.be/ontologies/2019/2/JO#Discipline1
+:Discipline1 rdf:type owl:NamedIndividual ,
+                      :Discipline ;
+             :name "Doubles"^^xsd:string .
+
+
+###  http://www.uliege.be/ontologies/2019/2/JO#Discipline2
+:Discipline2 rdf:type owl:NamedIndividual ,
+                      :Discipline ;
+             :name "Singles"^^xsd:string .
+
+
+###  http://www.uliege.be/ontologies/2019/2/JO#Match1
+:Match1 rdf:type owl:NamedIndividual ,
+                 :Match ;
+        :Id "1"^^xsd:int ;
+        :city "Rio de Janeiro"^^xsd:string ;
+        :date "2016-08-15T09:10:00"^^xsd:dateTime ;
+        :name "Match Double Men"^^xsd:string .
+
+
+###  http://www.uliege.be/ontologies/2019/2/JO#Ordeal1
+:Ordeal1 rdf:type owl:NamedIndividual ,
+                  :Ordeal ;
+         :sexe "Men"^^xsd:string .
+
+
+###  http://www.uliege.be/ontologies/2019/2/JO#Ordeal2
+:Ordeal2 rdf:type owl:NamedIndividual ,
+                  :Ordeal ;
+         :sexe "Women"^^xsd:string .
+
+
+###  http://www.uliege.be/ontologies/2019/2/JO#Sport1
+:Sport1 rdf:type owl:NamedIndividual ,
+                 :Sport ;
+        :name "Swimming"^^xsd:string .
+
+
+###  http://www.uliege.be/ontologies/2019/2/JO#Sport2
+:Sport2 rdf:type owl:NamedIndividual ,
+                 :Sport ;
+        :name "Boxing"^^xsd:string .
+
+
+###  http://www.uliege.be/ontologies/2019/2/JO#Sport3
+:Sport3 rdf:type owl:NamedIndividual ,
+                 :Sport ;
+        :name "Athletics"^^xsd:string .
+
+
+###  http://www.uliege.be/ontologies/2019/2/JO#Sport4
+:Sport4 rdf:type owl:NamedIndividual ,
+                 :Sport ;
+        :name "Tennis"^^xsd:string .
+
+
+###  http://www.uliege.be/ontologies/2019/2/JO#Team1
+:Team1 rdf:type owl:NamedIndividual ,
+                :Team ;
+       :name "Pierre-Hugues Herbert & Nicolas Mahut"^^xsd:string .
+
+
+###  http://www.uliege.be/ontologies/2019/2/JO#Team2
+:Team2 rdf:type owl:NamedIndividual ,
+                :Team ;
+       :name "Marc López & Rafael Nadal"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
