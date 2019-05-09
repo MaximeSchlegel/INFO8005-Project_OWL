@@ -11,7 +11,6 @@ public class App {
 
         //Load OWL File
         mFactory.loadOntologyLocal("src/main/resources/JOV2.owl");
-//        System.out.println(mFactory.getmOWLOntology());
 
         //Modification Add un Axiom
         mFactory.addDeclarationAxiom("test");
@@ -19,10 +18,15 @@ public class App {
         //Modificaton Add un Sub Axiom
         mFactory.addSubClassAxiom("test", "subtest");
 
+        //Remove Axiom
         mFactory.removeAxiom("test");
 
-//        Save OWL File
-        mFactory.saveOntologyLocal("src/main/resources/JOVTEST2.owl");
+        //Launch Reasoner
+        mFactory.LaunchReasoner();
+
+        mFactory.inferredSubClass();
+        //Save OWL File
+//        mFactory.saveOntologyLocal("src/main/resources/JOVTEST2.owl");
 
 
     }

@@ -1,10 +1,12 @@
-import jdk.nashorn.internal.objects.annotations.Function;
+import org.semanticweb.HermiT.Reasoner;
+import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.formats.FunctionalSyntaxDocumentFormat;
-import org.semanticweb.owlapi.io.OWLOntologyDocumentSource;
-import org.semanticweb.owlapi.io.StreamDocumentSource;
 import org.semanticweb.owlapi.model.*;
-import org.semanticweb.owlapi.util.OWLClassLiteralCollector;
+import org.semanticweb.owlapi.reasoner.InferenceType;
+import org.semanticweb.owlapi.reasoner.OWLReasoner;
+import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
+
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,6 +18,7 @@ public class Factory {
 
     private OWLManager mOWLManager;
     private OWLOntology mOWLOntology;
+    private OWLReasoner mOWLReasoner;
     public void createOntology() throws OWLException {
       OWLOntologyManager man = OWLManager.createOWLOntologyManager();
       OWLOntology o = man.createOntology();
@@ -74,6 +77,16 @@ public class Factory {
             }
         }
         mOWLOntology.remove(axiomsToRemove);
+    }
+    public void LaunchReasoner(){
+        OWLReasonerFactory mOWLReasonerFactory = new ReasonerFactory();
+        this.mOWLReasoner = mOWLReasonerFactory.createReasoner(getmOWLOntology());
+        this.mOWLReasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
+    }
+    public void inferredSubClass(){
+        OWLDataFactory df = mOWLOntology.getOWLOntologyManager().getOWLDataFactory();
+        mOWLReasoner.getSubClasses(df.getOWLClass("#subtest"), false).forEach(System.out::println);
+
     }
     public OWLManager getmOWLManager() {
         return mOWLManager;
