@@ -1,0 +1,2084 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.uliege.be/ontologies/2019/2/JO"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.uliege.be/ontologies/2019/2/JO"
+     versionIRI="http://www.uliege.be/ontologies/2019/2/JO/1.0">
+    <Prefix name="" IRI="http://www.uliege.be/ontologies/2019/2/JO"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal>Chauvin &amp; Schlegel &amp; Mamassi</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>Project 2019 Semantic Data</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event_Date"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event_Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record_Date"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record_Score"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record_Time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="time:DataTimeDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Associate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Belong"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compete"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compose"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ComposeBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#DisciplineOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#From"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#HappenDate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#HappenPlace"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#HasDiscipline"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Have"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#IsDisciplineOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#IsPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#OriginateFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#RecordDate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#RecordOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#RecordParticipant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#SponsedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsors"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Rule"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#abandon"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#birthdate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#city"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#rank"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#score"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#sexe"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#time"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athlete1_Tennis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country10_Spain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country1_Italy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country2_France"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country3_Maroc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country4_US"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country5_GB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country6_Japan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country7_Belgium"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country8_China"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country9_Australia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline1_Tennis_Double"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline2_Tennis_Singles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2012"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match1_Tennis_Double_Men_Random"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal1_Tennis_Double_Men"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal2_Tennis_Double_Women"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record1_Tennis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result1_team1_tennis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result2_team2_tennis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor1_CocaCola"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor2_VISA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor3_GeneralElectric"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor4_Intel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor5_Samsung"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor6_AliBabaGroup"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport1_Swimming"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport2_Boxing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport3_Athletics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport4_Tennis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team1_Tennis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team2_Tennis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete2_AkaniSimbine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete2_AndreDegrasse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete2_BenYoussefMeite"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete2_JimmyVicaut"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete2_JustinGatlin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete2_TrayvonBromell"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete2_UsainBolt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete2_YohanBlake"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country11_Jamaica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country12_Canada"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country13_SouthAfrica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country14_IvoryCoast"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation10_Spain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation11_Jamaica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation12_Canada"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation13_SouthAfrica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation14_IvoryCoast"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation1_Italy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation2_France"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation3_Maroc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation4_US"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation5_GB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation6_Japan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation7_Belgium"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation8_China"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation9_Australia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Discipline3_Athletics_100M"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result_ADegrasse_Final_100m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result_ASimbine_Final_100m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result_BYMeite_Final_100M"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result_JGATLIN_Final_100m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result_JVicaut_Final_100m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result_TBromell_Final_100m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result_UBolt_Final_100m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result_YBlake_Final_100m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WorldRecord_Athletics_100m"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compose"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#OriginateFrom"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#SponsedBy"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Associate"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#SponsedBy"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event_Date"/>
+        <Class abbreviatedIRI="time:DataTimeDescription"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Have"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#IsPartOf"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Have"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Associate"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#IsPartOf"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#SponsedBy"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#From"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record_Score"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record_Time"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsors"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsors"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsors"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ComposeBy"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athlete1_Tennis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country10_Spain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country1_Italy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country2_France"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country3_Maroc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country4_US"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country5_GB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country6_Japan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country7_Belgium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country8_China"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country9_Australia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline1_Tennis_Double"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline2_Tennis_Singles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2012"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match1_Tennis_Double_Men_Random"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal1_Tennis_Double_Men"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal2_Tennis_Double_Women"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record_Score"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record1_Tennis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result1_team1_tennis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result2_team2_tennis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor1_CocaCola"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor2_VISA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor3_GeneralElectric"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor4_Intel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor5_Samsung"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor6_AliBabaGroup"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport1_Swimming"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport2_Boxing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport3_Athletics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport4_Tennis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team1_Tennis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team2_Tennis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+        <NamedIndividual IRI="#Athlete2_AkaniSimbine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+        <NamedIndividual IRI="#Athlete2_AndreDegrasse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+        <NamedIndividual IRI="#Athlete2_BenYoussefMeite"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+        <NamedIndividual IRI="#Athlete2_JimmyVicaut"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+        <NamedIndividual IRI="#Athlete2_JustinGatlin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+        <NamedIndividual IRI="#Athlete2_TrayvonBromell"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+        <NamedIndividual IRI="#Athlete2_UsainBolt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+        <NamedIndividual IRI="#Athlete2_YohanBlake"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        <NamedIndividual IRI="#Country11_Jamaica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        <NamedIndividual IRI="#Country12_Canada"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        <NamedIndividual IRI="#Country13_SouthAfrica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+        <NamedIndividual IRI="#Country14_IvoryCoast"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+        <NamedIndividual IRI="#Delegation10_Spain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+        <NamedIndividual IRI="#Delegation11_Jamaica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+        <NamedIndividual IRI="#Delegation12_Canada"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+        <NamedIndividual IRI="#Delegation13_SouthAfrica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+        <NamedIndividual IRI="#Delegation14_IvoryCoast"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+        <NamedIndividual IRI="#Delegation1_Italy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+        <NamedIndividual IRI="#Delegation2_France"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+        <NamedIndividual IRI="#Delegation3_Maroc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+        <NamedIndividual IRI="#Delegation4_US"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+        <NamedIndividual IRI="#Delegation5_GB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+        <NamedIndividual IRI="#Delegation6_Japan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+        <NamedIndividual IRI="#Delegation7_Belgium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+        <NamedIndividual IRI="#Delegation8_China"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+        <NamedIndividual IRI="#Delegation9_Australia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline"/>
+        <NamedIndividual IRI="#Discipline3_Athletics_100M"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        <NamedIndividual IRI="#Result_ADegrasse_Final_100m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        <NamedIndividual IRI="#Result_ASimbine_Final_100m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        <NamedIndividual IRI="#Result_BYMeite_Final_100M"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        <NamedIndividual IRI="#Result_JGATLIN_Final_100m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        <NamedIndividual IRI="#Result_JVicaut_Final_100m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        <NamedIndividual IRI="#Result_TBromell_Final_100m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        <NamedIndividual IRI="#Result_UBolt_Final_100m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        <NamedIndividual IRI="#Result_YBlake_Final_100m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record_Time"/>
+        <NamedIndividual IRI="#WorldRecord_Athletics_100m"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athlete1_Tennis"/>
+        <NamedIndividual IRI="#Delegation10_Spain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#DisciplineOf"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline1_Tennis_Double"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport4_Tennis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#DisciplineOf"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline2_Tennis_Singles"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport4_Tennis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#IsPartOf"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match1_Tennis_Double_Men_Random"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal1_Tennis_Double_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Associate"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal1_Tennis_Double_Men"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline1_Tennis_Double"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#IsPartOf"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal1_Tennis_Double_Men"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#RecordOf"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record1_Tennis"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline1_Tennis_Double"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result1_team1_tennis"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match1_Tennis_Double_Men_Random"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result1_team1_tennis"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team1_Tennis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result2_team2_tennis"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match1_Tennis_Double_Men_Random"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result2_team2_tennis"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team2_Tennis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsors"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor1_CocaCola"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsors"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor2_VISA"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsors"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor3_GeneralElectric"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsors"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor4_Intel"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsors"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor5_Samsung"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsors"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor6_AliBabaGroup"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compete"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team1_Tennis"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal1_Tennis_Double_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#From"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team1_Tennis"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country2_France"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compete"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team2_Tennis"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal1_Tennis_Double_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#From"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team2_Tennis"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country10_Spain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compete"/>
+        <NamedIndividual IRI="#Athlete2_AkaniSimbine"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#From"/>
+        <NamedIndividual IRI="#Athlete2_AkaniSimbine"/>
+        <NamedIndividual IRI="#Country13_SouthAfrica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+        <NamedIndividual IRI="#Athlete2_AkaniSimbine"/>
+        <NamedIndividual IRI="#Delegation13_SouthAfrica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compete"/>
+        <NamedIndividual IRI="#Athlete2_AndreDegrasse"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#From"/>
+        <NamedIndividual IRI="#Athlete2_AndreDegrasse"/>
+        <NamedIndividual IRI="#Country12_Canada"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+        <NamedIndividual IRI="#Athlete2_AndreDegrasse"/>
+        <NamedIndividual IRI="#Delegation12_Canada"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compete"/>
+        <NamedIndividual IRI="#Athlete2_BenYoussefMeite"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#From"/>
+        <NamedIndividual IRI="#Athlete2_BenYoussefMeite"/>
+        <NamedIndividual IRI="#Country14_IvoryCoast"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+        <NamedIndividual IRI="#Athlete2_BenYoussefMeite"/>
+        <NamedIndividual IRI="#Delegation14_IvoryCoast"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compete"/>
+        <NamedIndividual IRI="#Athlete2_JimmyVicaut"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#From"/>
+        <NamedIndividual IRI="#Athlete2_JimmyVicaut"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country2_France"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+        <NamedIndividual IRI="#Athlete2_JimmyVicaut"/>
+        <NamedIndividual IRI="#Delegation2_France"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compete"/>
+        <NamedIndividual IRI="#Athlete2_JustinGatlin"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#From"/>
+        <NamedIndividual IRI="#Athlete2_JustinGatlin"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country4_US"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+        <NamedIndividual IRI="#Athlete2_JustinGatlin"/>
+        <NamedIndividual IRI="#Delegation4_US"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compete"/>
+        <NamedIndividual IRI="#Athlete2_TrayvonBromell"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#From"/>
+        <NamedIndividual IRI="#Athlete2_TrayvonBromell"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country4_US"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+        <NamedIndividual IRI="#Athlete2_TrayvonBromell"/>
+        <NamedIndividual IRI="#Delegation4_US"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compete"/>
+        <NamedIndividual IRI="#Athlete2_UsainBolt"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#From"/>
+        <NamedIndividual IRI="#Athlete2_UsainBolt"/>
+        <NamedIndividual IRI="#Country11_Jamaica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+        <NamedIndividual IRI="#Athlete2_UsainBolt"/>
+        <NamedIndividual IRI="#Delegation11_Jamaica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compete"/>
+        <NamedIndividual IRI="#Athlete2_YohanBlake"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#From"/>
+        <NamedIndividual IRI="#Athlete2_YohanBlake"/>
+        <NamedIndividual IRI="#Country11_Jamaica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+        <NamedIndividual IRI="#Delegation10_Spain"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <NamedIndividual IRI="#Delegation10_Spain"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country10_Spain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+        <NamedIndividual IRI="#Delegation11_Jamaica"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <NamedIndividual IRI="#Delegation11_Jamaica"/>
+        <NamedIndividual IRI="#Country11_Jamaica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+        <NamedIndividual IRI="#Delegation12_Canada"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <NamedIndividual IRI="#Delegation12_Canada"/>
+        <NamedIndividual IRI="#Country12_Canada"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+        <NamedIndividual IRI="#Delegation13_SouthAfrica"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <NamedIndividual IRI="#Delegation13_SouthAfrica"/>
+        <NamedIndividual IRI="#Country13_SouthAfrica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+        <NamedIndividual IRI="#Delegation14_IvoryCoast"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <NamedIndividual IRI="#Delegation14_IvoryCoast"/>
+        <NamedIndividual IRI="#Country14_IvoryCoast"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+        <NamedIndividual IRI="#Delegation1_Italy"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <NamedIndividual IRI="#Delegation1_Italy"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country1_Italy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+        <NamedIndividual IRI="#Delegation2_France"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <NamedIndividual IRI="#Delegation2_France"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country2_France"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+        <NamedIndividual IRI="#Delegation3_Maroc"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <NamedIndividual IRI="#Delegation3_Maroc"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country3_Maroc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+        <NamedIndividual IRI="#Delegation4_US"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <NamedIndividual IRI="#Delegation4_US"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country4_US"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+        <NamedIndividual IRI="#Delegation5_GB"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <NamedIndividual IRI="#Delegation5_GB"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country5_GB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+        <NamedIndividual IRI="#Delegation6_Japan"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <NamedIndividual IRI="#Delegation6_Japan"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country6_Japan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+        <NamedIndividual IRI="#Delegation7_Belgium"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <NamedIndividual IRI="#Delegation7_Belgium"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country7_Belgium"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+        <NamedIndividual IRI="#Delegation8_China"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <NamedIndividual IRI="#Delegation8_China"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country8_China"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+        <NamedIndividual IRI="#Delegation9_Australia"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <NamedIndividual IRI="#Delegation9_Australia"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country9_Australia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#DisciplineOf"/>
+        <NamedIndividual IRI="#Discipline3_Athletics_100M"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport3_Athletics"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#IsPartOf"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Associate"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+        <NamedIndividual IRI="#Discipline3_Athletics_100M"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#IsPartOf"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch"/>
+        <NamedIndividual IRI="#Result_ADegrasse_Final_100m"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+        <NamedIndividual IRI="#Result_ADegrasse_Final_100m"/>
+        <NamedIndividual IRI="#Athlete2_AndreDegrasse"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch"/>
+        <NamedIndividual IRI="#Result_ASimbine_Final_100m"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+        <NamedIndividual IRI="#Result_ASimbine_Final_100m"/>
+        <NamedIndividual IRI="#Athlete2_AkaniSimbine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch"/>
+        <NamedIndividual IRI="#Result_BYMeite_Final_100M"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+        <NamedIndividual IRI="#Result_BYMeite_Final_100M"/>
+        <NamedIndividual IRI="#Athlete2_BenYoussefMeite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch"/>
+        <NamedIndividual IRI="#Result_JGATLIN_Final_100m"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+        <NamedIndividual IRI="#Result_JGATLIN_Final_100m"/>
+        <NamedIndividual IRI="#Athlete2_JustinGatlin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch"/>
+        <NamedIndividual IRI="#Result_JVicaut_Final_100m"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+        <NamedIndividual IRI="#Result_JVicaut_Final_100m"/>
+        <NamedIndividual IRI="#Athlete2_JimmyVicaut"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch"/>
+        <NamedIndividual IRI="#Result_TBromell_Final_100m"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+        <NamedIndividual IRI="#Result_TBromell_Final_100m"/>
+        <NamedIndividual IRI="#Athlete2_TrayvonBromell"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch"/>
+        <NamedIndividual IRI="#Result_UBolt_Final_100m"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+        <NamedIndividual IRI="#Result_UBolt_Final_100m"/>
+        <NamedIndividual IRI="#Athlete2_UsainBolt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch"/>
+        <NamedIndividual IRI="#Result_YBlake_Final_100m"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+        <NamedIndividual IRI="#Result_YBlake_Final_100m"/>
+        <NamedIndividual IRI="#Athlete2_YohanBlake"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#RecordOf"/>
+        <NamedIndividual IRI="#WorldRecord_Athletics_100m"/>
+        <NamedIndividual IRI="#Discipline3_Athletics_100M"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#RecordParticipant"/>
+        <NamedIndividual IRI="#WorldRecord_Athletics_100m"/>
+        <NamedIndividual IRI="#Athlete2_UsainBolt"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athlete1_Tennis"/>
+        <Literal>Rafael NADAL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country10_Spain"/>
+        <Literal>Spain</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country1_Italy"/>
+        <Literal>Italy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country2_France"/>
+        <Literal>France</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country3_Maroc"/>
+        <Literal>Maroc</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country4_US"/>
+        <Literal>united States</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country5_GB"/>
+        <Literal>Great Britain</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country6_Japan"/>
+        <Literal>Japan</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country7_Belgium"/>
+        <Literal>Belgium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country8_China"/>
+        <Literal>China</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country9_Australia"/>
+        <Literal>Australia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline1_Tennis_Double"/>
+        <Literal>Doubles</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline2_Tennis_Singles"/>
+        <Literal>Singles</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Id"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2012"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#city"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2012"/>
+        <Literal>London</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2012"/>
+        <Literal>Great Britain</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#date"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2012"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2012-07-27T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2012"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2012</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Id"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#city"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+        <Literal>Rio de Janeiro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+        <Literal>Brazil</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#date"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-05T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO2016"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Id"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match1_Tennis_Double_Men_Random"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#city"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match1_Tennis_Double_Men_Random"/>
+        <Literal>Rio de Janeiro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#date"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match1_Tennis_Double_Men_Random"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-15T09:10:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match1_Tennis_Double_Men_Random"/>
+        <Literal>Match Double Men</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#sexe"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal1_Tennis_Double_Men"/>
+        <Literal>Men</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#sexe"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal2_Tennis_Double_Women"/>
+        <Literal>Women</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#rank"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result1_team1_tennis"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#abandon"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result2_team2_tennis"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor1_CocaCola"/>
+        <Literal>CocaCola</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor2_VISA"/>
+        <Literal>VISA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor3_GeneralElectric"/>
+        <Literal>General Electric</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor4_Intel"/>
+        <Literal>Intel</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor5_Samsung"/>
+        <Literal>Samsung</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor6_AliBabaGroup"/>
+        <Literal>AliBaba Group</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport1_Swimming"/>
+        <Literal>Swimming</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport2_Boxing"/>
+        <Literal>Boxing</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport3_Athletics"/>
+        <Literal>Athletics</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport4_Tennis"/>
+        <Literal>Tennis</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team1_Tennis"/>
+        <Literal>Pierre-Hugues Herbert &amp; Nicolas Mahut</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team2_Tennis"/>
+        <Literal>Marc López &amp; Rafael Nadal</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="#Athlete2_AkaniSimbine"/>
+        <Literal>Akani SIMBINE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="#Athlete2_AndreDegrasse"/>
+        <Literal>Andre DE GRASSE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="#Athlete2_BenYoussefMeite"/>
+        <Literal>Ben Youssef MEITE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="#Athlete2_JimmyVicaut"/>
+        <Literal>Jimmy VICAUT</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="#Athlete2_JustinGatlin"/>
+        <Literal>Justin GATLIN</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="#Athlete2_TrayvonBromell"/>
+        <Literal>Trayvon BROMELL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="#Athlete2_UsainBolt"/>
+        <Literal>Usain BOLT</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="#Athlete2_YohanBlake"/>
+        <Literal>Yohan BLAKE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <NamedIndividual IRI="#Country11_Jamaica"/>
+        <Literal>Jamaica</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <NamedIndividual IRI="#Country12_Canada"/>
+        <Literal>Canada</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <NamedIndividual IRI="#Country13_SouthAfrica"/>
+        <Literal>South Africa</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <NamedIndividual IRI="#Country14_IvoryCoast"/>
+        <Literal>Ivory Coast</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <NamedIndividual IRI="#Discipline3_Athletics_100M"/>
+        <Literal>100M</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#sexe"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+        <Literal>Men</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#rank"/>
+        <NamedIndividual IRI="#Result_ADegrasse_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Result_ADegrasse_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.91</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#rank"/>
+        <NamedIndividual IRI="#Result_ASimbine_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Result_ASimbine_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.94</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#rank"/>
+        <NamedIndividual IRI="#Result_BYMeite_Final_100M"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Result_BYMeite_Final_100M"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#rank"/>
+        <NamedIndividual IRI="#Result_JGATLIN_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Result_JGATLIN_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.89</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#rank"/>
+        <NamedIndividual IRI="#Result_JVicaut_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Result_JVicaut_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.04</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#rank"/>
+        <NamedIndividual IRI="#Result_TBromell_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Result_TBromell_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.06</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#rank"/>
+        <NamedIndividual IRI="#Result_UBolt_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Result_UBolt_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.81</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#rank"/>
+        <NamedIndividual IRI="#Result_YBlake_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Result_YBlake_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.93</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#WorldRecord_Athletics_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.58</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsors"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compose"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ComposeBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#From"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#OriginateFrom"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#HasDiscipline"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#IsDisciplineOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Have"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#IsPartOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#RecordOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#SponsedBy"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsors"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Associate"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Associate"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Belong"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event_Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compete"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compose"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ComposeBy"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#DisciplineOf"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#From"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#HappenDate"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#HappenPlace"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#HasDiscipline"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Have"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#IsDisciplineOf"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#IsPartOf"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#OriginateFrom"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#RecordDate"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#RecordOf"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#RecordParticipant"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Delegation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#SponsedBy"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsors"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Associate"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Ordeal"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Attend"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Belong"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compete"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Compose"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Team"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ComposeBy"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#DisciplineOf"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#From"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#HappenDate"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event_Date"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#HappenPlace"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event_Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#HasDiscipline"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sport"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Have"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#IsDisciplineOf"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#IsPartOf"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#OriginateFrom"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#RecordDate"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Record_Date"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#RecordOf"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#RecordParticipant"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Represent"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultMatch"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Match"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#ResultParticipant"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#SponsedBy"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Sponsors"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Country"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+            <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Participant"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#rank"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#time"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Id"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Rule"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Discipline"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#abandon"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#age"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#birthdate"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Athletic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#city"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#date"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#rank"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#score"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Result"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#year"/>
+        <Class IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#JO"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Id"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#Rule"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#abandon"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#age"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#birthdate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#city"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#country"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#date"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#rank"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#score"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/hp/ontologies/2019/2/untitled-ontology-9#sexe"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

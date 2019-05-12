@@ -10,7 +10,7 @@ public class App {
         Factory mFactory = new Factory();
 
         //Load OWL File
-        mFactory.loadOntologyLocal("src/main/resources/JOV2.owl");
+        mFactory.loadOntologyLocal("src/main/resources/JOV4.owl");
 
         //Modification Add un Axiom
         mFactory.addDeclarationAxiom("test");
@@ -19,14 +19,28 @@ public class App {
         mFactory.addSubClassAxiom("test", "subtest");
 
         //Remove Axiom
-        mFactory.removeAxiom("test");
+//        mFactory.removeAxiom("test");
+
+        //Add Property
+        mFactory.addProperty("hasTest", "test", "result");
+
+        //Add ObjectValueSome
+        mFactory.addComplexExpressionSome("test", "hasTest");
+
+        //Add ObjectValueExactlyCardinality
+        mFactory.addComplexExpressionExactCardinality("test", "hasTest", 1);
+
+        //Add Individual
+        mFactory.addIndividual("test", "Test1");
 
         //Launch Reasoner
         mFactory.LaunchReasoner();
 
         mFactory.inferredSubClass();
         //Save OWL File
-        mFactory.saveOntologyLocal("src/main/resources/JOVTEST2.owl");
+        mFactory.saveOntologyLocal("src/main/resources/JOVTEST4.owl");
+
+        mFactory.IterateOverAxioms();
 
 
     }
