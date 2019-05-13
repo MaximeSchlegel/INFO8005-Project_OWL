@@ -24,6 +24,7 @@ public class Factory {
     private OWLManager mOWLManager;
     private OWLOntology mOWLOntology;
     private OWLReasoner mOWLReasoner;
+    private static String IRIONTOLOGY = "http://www.uliege.be/ontologies/2019/2/JO#";
     public void createOntology() throws OWLException {
       OWLOntologyManager man = OWLManager.createOWLOntologyManager();
       this.mOWLOntology = man.createOntology();
@@ -53,32 +54,34 @@ public class Factory {
     }
     public void addDeclarationAxiom(String mAxiom){
         OWLDataFactory df = mOWLOntology.getOWLOntologyManager().getOWLDataFactory();
-        OWLClass axiom = df.getOWLClass(IRI.create("#" + mAxiom));
+        OWLClass axiom = df.getOWLClass(IRI.create(IRIONTOLOGY + mAxiom));
         OWLDeclarationAxiom da = df.getOWLDeclarationAxiom(axiom);
         mOWLOntology.add(da);
     }
     public void addSubClassAxiom(String mAxiom, String subAxiom){
         OWLDataFactory df = mOWLOntology.getOWLOntologyManager().getOWLDataFactory();
-        OWLClass axiom = df.getOWLClass(IRI.create("#" + mAxiom));
-        OWLClass mSubAxiom = df.getOWLClass(IRI.create("#" + subAxiom));
+        OWLClass axiom = df.getOWLClass(IRI.create(IRIONTOLOGY + mAxiom));
+        OWLClass mSubAxiom = df.getOWLClass(IRI.create(IRIONTOLOGY + subAxiom));
         OWLSubClassOfAxiom mOWLSubClassOfAxiom = df.getOWLSubClassOfAxiom(mSubAxiom, axiom);
         mOWLOntology.add(mOWLSubClassOfAxiom);
     }
-    public void addProperty(String mProperty, String mDomainAxiom, String mRangeAxiom){
+    public void addProperty(String mProperty, String mDomainAxiom, String mRangeAxiom, boolean isSymetric){
         OWLDataFactory df = mOWLOntology.getOWLOntologyManager().getOWLDataFactory();
-        OWLClass axiomDomain = df.getOWLClass(IRI.create("#" + mDomainAxiom));
-        OWLClass axiomRange = df.getOWLClass(IRI.create("#" + mRangeAxiom));
-        OWLObjectProperty R = df.getOWLObjectProperty(IRI.create("#"+ mProperty));
+        OWLClass axiomDomain = df.getOWLClass(IRI.create(IRIONTOLOGY + mDomainAxiom));
+        OWLClass axiomRange = df.getOWLClass(IRI.create(IRIONTOLOGY + mRangeAxiom));
+        OWLObjectProperty R = df.getOWLObjectProperty(IRI.create(IRIONTOLOGY+ mProperty));
         OWLObjectPropertyDomainAxiom domainAxiom = df.getOWLObjectPropertyDomainAxiom(R, axiomDomain);
         OWLObjectPropertyRangeAxiom rangeAxiom = df.getOWLObjectPropertyRangeAxiom(R, axiomRange);
         mOWLOntology.addAxiom(domainAxiom);
         mOWLOntology.addAxiom(rangeAxiom);
+        if(isSymetric)
+            mOWLOntology.addAxiom(df.getOWLSymmetricObjectPropertyAxiom(R));
     }
     public void addComplexExpressionSome(String mProperty, String mDomain, String mRange){
         OWLDataFactory df = mOWLOntology.getOWLOntologyManager().getOWLDataFactory();
-        OWLClass mOWLClassDomain = df.getOWLClass(IRI.create("#" + mDomain));
-        OWLClass mOWLClassRange = df.getOWLClass(IRI.create("#" + mRange));
-        OWLObjectProperty mOWLObjectProperty = df.getOWLObjectProperty(IRI.create("#" + mProperty));
+        OWLClass mOWLClassDomain = df.getOWLClass(IRI.create(IRIONTOLOGY + mDomain));
+        OWLClass mOWLClassRange = df.getOWLClass(IRI.create(IRIONTOLOGY + mRange));
+        OWLObjectProperty mOWLObjectProperty = df.getOWLObjectProperty(IRI.create(IRIONTOLOGY + mProperty));
         OWLClassAxiom ax = df.getOWLSubClassOfAxiom(
                 mOWLClassDomain,
                 df.getOWLObjectSomeValuesFrom(mOWLObjectProperty, mOWLClassRange)
@@ -87,9 +90,9 @@ public class Factory {
     }
     public void addComplexExpressionExactCardinality(String mProperty, String mDomain, String mRange, int cardinality){
         OWLDataFactory df = mOWLOntology.getOWLOntologyManager().getOWLDataFactory();
-        OWLClass mOWLClassDomain = df.getOWLClass(IRI.create("#" + mDomain));
-        OWLClass mOWLClassRange = df.getOWLClass(IRI.create("#" + mRange));
-        OWLObjectProperty mOWLObjectProperty = df.getOWLObjectProperty(IRI.create("#" + mProperty));
+        OWLClass mOWLClassDomain = df.getOWLClass(IRI.create(IRIONTOLOGY + mDomain));
+        OWLClass mOWLClassRange = df.getOWLClass(IRI.create(IRIONTOLOGY + mRange));
+        OWLObjectProperty mOWLObjectProperty = df.getOWLObjectProperty(IRI.create(IRIONTOLOGY + mProperty));
         OWLClassAxiom ax = df.getOWLSubClassOfAxiom(
                 mOWLClassDomain,
                 df.getOWLObjectExactCardinality(cardinality, mOWLObjectProperty, mOWLClassRange)
@@ -98,24 +101,23 @@ public class Factory {
     }
     public void addIndividual(String mAxiom, String mIndividual){
         OWLDataFactory df = mOWLOntology.getOWLOntologyManager().getOWLDataFactory();
-        OWLNamedIndividual mOWLNamedIndividual = df.getOWLNamedIndividual(IRI.create("#" + mIndividual));
+        OWLNamedIndividual mOWLNamedIndividual = df.getOWLNamedIndividual(IRI.create(IRIONTOLOGY + mIndividual));
         OWLClass mOWLClass = df.getOWLClass( IRI.create("#" + mAxiom) );
         mOWLOntology.addAxiom(df.getOWLClassAssertionAxiom(mOWLClass, mOWLNamedIndividual));
     }
     public void addIndividualObjectProperty(String mIndividual, String mProperty, String mIndividualRange){
         OWLDataFactory df = mOWLOntology.getOWLOntologyManager().getOWLDataFactory();
-        OWLNamedIndividual mOWLNamedIndividual = df.getOWLNamedIndividual(IRI.create("#" + mIndividual));
-        OWLNamedIndividual mOWLNamedIndividualRange = df.getOWLNamedIndividual(IRI.create("#" + mIndividualRange));
-        OWLObjectProperty mOWLObjectProperty = df.getOWLObjectProperty(IRI.create("#" + mProperty));
+        OWLNamedIndividual mOWLNamedIndividual = df.getOWLNamedIndividual(IRI.create(IRIONTOLOGY + mIndividual));
+        OWLNamedIndividual mOWLNamedIndividualRange = df.getOWLNamedIndividual(IRI.create(IRIONTOLOGY + mIndividualRange));
+        OWLObjectProperty mOWLObjectProperty = df.getOWLObjectProperty(IRI.create(IRIONTOLOGY + mProperty));
         df.getOWLObjectHasValue(mOWLObjectProperty, mOWLNamedIndividual);
         mOWLOntology.addAxiom(
                 df.getOWLObjectPropertyAssertionAxiom(mOWLObjectProperty, mOWLNamedIndividual, mOWLNamedIndividualRange)
         );
-
     }
     public void removeAxiom(String mAxiom){
         OWLDataFactory df = mOWLOntology.getOWLOntologyManager().getOWLDataFactory();
-        OWLClass axiom = df.getOWLClass(IRI.create("#" + mAxiom));
+        OWLClass axiom = df.getOWLClass(IRI.create(IRIONTOLOGY + mAxiom));
         Set<OWLAxiom> axiomsToRemove = new HashSet<OWLAxiom>();
         for (OWLAxiom ax : mOWLOntology.getAxioms()) {
             if (ax.getSignature().contains(axiom)) {
@@ -170,7 +172,7 @@ public class Factory {
 
 }
 
-
+//This code is found here https://github.com/owlcs/owlapi/wiki/DL-Queries-with-a-real-reasoner
 class DLQueryEngine {
     private final OWLReasoner reasoner;
     private final DLQueryParser parser;

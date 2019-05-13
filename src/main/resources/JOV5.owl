@@ -1,0 +1,2086 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.uliege.be/ontologies/2019/2/JO"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.uliege.be/ontologies/2019/2/JO"
+     versionIRI="http://www.uliege.be/ontologies/2019/2/JO/1.0">
+    <Prefix name="" IRI="http://www.uliege.be/ontologies/2019/2/JO"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal>Chauvin &amp; Schlegel &amp; Mamassi</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>Project 2019 Semantic Data</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Athletic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Delegation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Discipline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event_Date"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event_Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#JO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Match"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ordeal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Participant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Record"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Record_Date"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Record_Score"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Record_Time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Result"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sponsor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Team"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="time:DataTimeDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Associate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Attend"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Belong"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Compete"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Compose"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ComposeBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DisciplineOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#From"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HappenDate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HappenPlace"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HasDiscipline"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Have"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OriginateFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Record"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#RecordDate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#RecordOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#RecordParticipant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Represent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ResultMatch"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ResultParticipant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#SponsedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Sponsors"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Rule"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#abandon"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#birthdate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#city"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#country"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#rank"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#score"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sexe"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#time"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete1_Tennis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete2_AkaniSimbine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete2_AndreDegrasse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete2_BenYoussefMeite"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete2_JimmyVicaut"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete2_JustinGatlin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete2_TrayvonBromell"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete2_UsainBolt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Athlete2_YohanBlake"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country10_Spain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country11_Jamaica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country12_Canada"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country13_SouthAfrica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country14_IvoryCoast"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country1_Italy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country2_France"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country3_Maroc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country4_US"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country5_GB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country6_Japan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country7_Belgium"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country8_China"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Country9_Australia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation10_Spain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation11_Jamaica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation12_Canada"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation13_SouthAfrica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation14_IvoryCoast"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation1_Italy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation2_France"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation3_Maroc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation4_US"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation5_GB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation6_Japan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation7_Belgium"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation8_China"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delegation9_Australia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Discipline1_Tennis_Double"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Discipline2_Tennis_Singles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Discipline3_Athletics_100M"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JO2012"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JO2016"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Match1_Tennis_Double_Men_Random"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ordeal1_Tennis_Double_Men"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ordeal2_Tennis_Double_Women"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Record1_Tennis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result1_team1_tennis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result2_team2_tennis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result_ADegrasse_Final_100m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result_ASimbine_Final_100m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result_BYMeite_Final_100M"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result_JGATLIN_Final_100m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result_JVicaut_Final_100m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result_TBromell_Final_100m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result_UBolt_Final_100m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Result_YBlake_Final_100m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sponsor1_CocaCola"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sponsor2_VISA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sponsor3_GeneralElectric"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sponsor4_Intel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sponsor5_Samsung"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sponsor6_AliBabaGroup"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sport1_Swimming"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sport2_Boxing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sport3_Athletics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sport4_Tennis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Team1_Tennis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Team2_Tennis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WorldRecord_Athletics_100m"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Athletic"/>
+        <Class IRI="#Participant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Athletic"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Compose"/>
+            <Class IRI="#Team"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Country"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OriginateFrom"/>
+            <Class IRI="#Participant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Country"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#SponsedBy"/>
+            <Class IRI="#Sponsor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Discipline"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Associate"/>
+            <Class IRI="#Ordeal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Discipline"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#DisciplineOf"/>
+            <Class IRI="#Sport"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#SponsedBy"/>
+            <Class IRI="#Sponsor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event_Date"/>
+        <Class abbreviatedIRI="time:DataTimeDescription"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JO"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JO"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Have"/>
+            <Class IRI="#Ordeal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Match"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Match"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ResultMatch"/>
+            <Class IRI="#Result"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Match"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#IsPartOf"/>
+            <Class IRI="#Ordeal"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ordeal"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ordeal"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Have"/>
+            <Class IRI="#Match"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ordeal"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#Associate"/>
+            <Class IRI="#Discipline"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ordeal"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#IsPartOf"/>
+            <Class IRI="#JO"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Participant"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ResultParticipant"/>
+            <Class IRI="#Result"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Participant"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#SponsedBy"/>
+            <Class IRI="#Sponsor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Participant"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#From"/>
+            <Class IRI="#Country"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Record_Score"/>
+        <Class IRI="#Record"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Record_Time"/>
+        <Class IRI="#Record"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Result"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#ResultMatch"/>
+            <Class IRI="#Match"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Result"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#ResultParticipant"/>
+            <Class IRI="#Participant"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sponsor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Sponsors"/>
+            <Class IRI="#Country"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sponsor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Sponsors"/>
+            <Class IRI="#Event"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sponsor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Sponsors"/>
+            <Class IRI="#Participant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sport"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#HasDiscipline"/>
+            <Class IRI="#Discipline"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Team"/>
+        <Class IRI="#Participant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Team"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#ComposeBy"/>
+            <Class IRI="#Athletic"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Athletic"/>
+        <NamedIndividual IRI="#Athlete1_Tennis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Athletic"/>
+        <NamedIndividual IRI="#Athlete2_AkaniSimbine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Athletic"/>
+        <NamedIndividual IRI="#Athlete2_AndreDegrasse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Athletic"/>
+        <NamedIndividual IRI="#Athlete2_BenYoussefMeite"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Athletic"/>
+        <NamedIndividual IRI="#Athlete2_JimmyVicaut"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Athletic"/>
+        <NamedIndividual IRI="#Athlete2_JustinGatlin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Athletic"/>
+        <NamedIndividual IRI="#Athlete2_TrayvonBromell"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Athletic"/>
+        <NamedIndividual IRI="#Athlete2_UsainBolt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Athletic"/>
+        <NamedIndividual IRI="#Athlete2_YohanBlake"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Country10_Spain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Country11_Jamaica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Country12_Canada"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Country13_SouthAfrica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Country14_IvoryCoast"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Country1_Italy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Country2_France"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Country3_Maroc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Country4_US"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Country5_GB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Country6_Japan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Country7_Belgium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Country8_China"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Country9_Australia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Delegation"/>
+        <NamedIndividual IRI="#Delegation10_Spain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Delegation"/>
+        <NamedIndividual IRI="#Delegation11_Jamaica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Delegation"/>
+        <NamedIndividual IRI="#Delegation12_Canada"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Delegation"/>
+        <NamedIndividual IRI="#Delegation13_SouthAfrica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Delegation"/>
+        <NamedIndividual IRI="#Delegation14_IvoryCoast"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Delegation"/>
+        <NamedIndividual IRI="#Delegation1_Italy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Delegation"/>
+        <NamedIndividual IRI="#Delegation2_France"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Delegation"/>
+        <NamedIndividual IRI="#Delegation3_Maroc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Delegation"/>
+        <NamedIndividual IRI="#Delegation4_US"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Delegation"/>
+        <NamedIndividual IRI="#Delegation5_GB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Delegation"/>
+        <NamedIndividual IRI="#Delegation6_Japan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Delegation"/>
+        <NamedIndividual IRI="#Delegation7_Belgium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Delegation"/>
+        <NamedIndividual IRI="#Delegation8_China"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Delegation"/>
+        <NamedIndividual IRI="#Delegation9_Australia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Discipline"/>
+        <NamedIndividual IRI="#Discipline1_Tennis_Double"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Discipline"/>
+        <NamedIndividual IRI="#Discipline2_Tennis_Singles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Discipline"/>
+        <NamedIndividual IRI="#Discipline3_Athletics_100M"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Match"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#JO"/>
+        <NamedIndividual IRI="#JO2012"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#JO"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Match"/>
+        <NamedIndividual IRI="#Match1_Tennis_Double_Men_Random"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ordeal"/>
+        <NamedIndividual IRI="#Ordeal1_Tennis_Double_Men"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ordeal"/>
+        <NamedIndividual IRI="#Ordeal2_Tennis_Double_Women"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ordeal"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Record_Score"/>
+        <NamedIndividual IRI="#Record1_Tennis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Result"/>
+        <NamedIndividual IRI="#Result1_team1_tennis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Result"/>
+        <NamedIndividual IRI="#Result2_team2_tennis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Result"/>
+        <NamedIndividual IRI="#Result_ADegrasse_Final_100m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Result"/>
+        <NamedIndividual IRI="#Result_ASimbine_Final_100m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Result"/>
+        <NamedIndividual IRI="#Result_BYMeite_Final_100M"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Result"/>
+        <NamedIndividual IRI="#Result_JGATLIN_Final_100m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Result"/>
+        <NamedIndividual IRI="#Result_JVicaut_Final_100m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Result"/>
+        <NamedIndividual IRI="#Result_TBromell_Final_100m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Result"/>
+        <NamedIndividual IRI="#Result_UBolt_Final_100m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Result"/>
+        <NamedIndividual IRI="#Result_YBlake_Final_100m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sponsor"/>
+        <NamedIndividual IRI="#Sponsor1_CocaCola"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sponsor"/>
+        <NamedIndividual IRI="#Sponsor2_VISA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sponsor"/>
+        <NamedIndividual IRI="#Sponsor3_GeneralElectric"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sponsor"/>
+        <NamedIndividual IRI="#Sponsor4_Intel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sponsor"/>
+        <NamedIndividual IRI="#Sponsor5_Samsung"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sponsor"/>
+        <NamedIndividual IRI="#Sponsor6_AliBabaGroup"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sport"/>
+        <NamedIndividual IRI="#Sport1_Swimming"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sport"/>
+        <NamedIndividual IRI="#Sport2_Boxing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sport"/>
+        <NamedIndividual IRI="#Sport3_Athletics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sport"/>
+        <NamedIndividual IRI="#Sport4_Tennis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Team"/>
+        <NamedIndividual IRI="#Team1_Tennis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Team"/>
+        <NamedIndividual IRI="#Team2_Tennis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Record_Time"/>
+        <NamedIndividual IRI="#WorldRecord_Athletics_100m"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+        <NamedIndividual IRI="#Athlete1_Tennis"/>
+        <NamedIndividual IRI="#Delegation10_Spain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Compete"/>
+        <NamedIndividual IRI="#Athlete2_AkaniSimbine"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+        <NamedIndividual IRI="#Athlete2_AkaniSimbine"/>
+        <NamedIndividual IRI="#Delegation13_SouthAfrica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#From"/>
+        <NamedIndividual IRI="#Athlete2_AkaniSimbine"/>
+        <NamedIndividual IRI="#Country13_SouthAfrica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Compete"/>
+        <NamedIndividual IRI="#Athlete2_AndreDegrasse"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+        <NamedIndividual IRI="#Athlete2_AndreDegrasse"/>
+        <NamedIndividual IRI="#Delegation12_Canada"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#From"/>
+        <NamedIndividual IRI="#Athlete2_AndreDegrasse"/>
+        <NamedIndividual IRI="#Country12_Canada"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Compete"/>
+        <NamedIndividual IRI="#Athlete2_BenYoussefMeite"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+        <NamedIndividual IRI="#Athlete2_BenYoussefMeite"/>
+        <NamedIndividual IRI="#Delegation14_IvoryCoast"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#From"/>
+        <NamedIndividual IRI="#Athlete2_BenYoussefMeite"/>
+        <NamedIndividual IRI="#Country14_IvoryCoast"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Compete"/>
+        <NamedIndividual IRI="#Athlete2_JimmyVicaut"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+        <NamedIndividual IRI="#Athlete2_JimmyVicaut"/>
+        <NamedIndividual IRI="#Delegation2_France"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#From"/>
+        <NamedIndividual IRI="#Athlete2_JimmyVicaut"/>
+        <NamedIndividual IRI="#Country2_France"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Compete"/>
+        <NamedIndividual IRI="#Athlete2_JustinGatlin"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+        <NamedIndividual IRI="#Athlete2_JustinGatlin"/>
+        <NamedIndividual IRI="#Delegation4_US"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#From"/>
+        <NamedIndividual IRI="#Athlete2_JustinGatlin"/>
+        <NamedIndividual IRI="#Country4_US"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Compete"/>
+        <NamedIndividual IRI="#Athlete2_TrayvonBromell"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+        <NamedIndividual IRI="#Athlete2_TrayvonBromell"/>
+        <NamedIndividual IRI="#Delegation4_US"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#From"/>
+        <NamedIndividual IRI="#Athlete2_TrayvonBromell"/>
+        <NamedIndividual IRI="#Country4_US"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Compete"/>
+        <NamedIndividual IRI="#Athlete2_UsainBolt"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+        <NamedIndividual IRI="#Athlete2_UsainBolt"/>
+        <NamedIndividual IRI="#Delegation11_Jamaica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#From"/>
+        <NamedIndividual IRI="#Athlete2_UsainBolt"/>
+        <NamedIndividual IRI="#Country11_Jamaica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Compete"/>
+        <NamedIndividual IRI="#Athlete2_YohanBlake"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#From"/>
+        <NamedIndividual IRI="#Athlete2_YohanBlake"/>
+        <NamedIndividual IRI="#Country11_Jamaica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Attend"/>
+        <NamedIndividual IRI="#Delegation10_Spain"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Represent"/>
+        <NamedIndividual IRI="#Delegation10_Spain"/>
+        <NamedIndividual IRI="#Country10_Spain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Attend"/>
+        <NamedIndividual IRI="#Delegation11_Jamaica"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Represent"/>
+        <NamedIndividual IRI="#Delegation11_Jamaica"/>
+        <NamedIndividual IRI="#Country11_Jamaica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Attend"/>
+        <NamedIndividual IRI="#Delegation12_Canada"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Represent"/>
+        <NamedIndividual IRI="#Delegation12_Canada"/>
+        <NamedIndividual IRI="#Country12_Canada"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Attend"/>
+        <NamedIndividual IRI="#Delegation13_SouthAfrica"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Represent"/>
+        <NamedIndividual IRI="#Delegation13_SouthAfrica"/>
+        <NamedIndividual IRI="#Country13_SouthAfrica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Attend"/>
+        <NamedIndividual IRI="#Delegation14_IvoryCoast"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Represent"/>
+        <NamedIndividual IRI="#Delegation14_IvoryCoast"/>
+        <NamedIndividual IRI="#Country14_IvoryCoast"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Attend"/>
+        <NamedIndividual IRI="#Delegation1_Italy"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Represent"/>
+        <NamedIndividual IRI="#Delegation1_Italy"/>
+        <NamedIndividual IRI="#Country1_Italy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Attend"/>
+        <NamedIndividual IRI="#Delegation2_France"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Represent"/>
+        <NamedIndividual IRI="#Delegation2_France"/>
+        <NamedIndividual IRI="#Country2_France"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Attend"/>
+        <NamedIndividual IRI="#Delegation3_Maroc"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Represent"/>
+        <NamedIndividual IRI="#Delegation3_Maroc"/>
+        <NamedIndividual IRI="#Country3_Maroc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Attend"/>
+        <NamedIndividual IRI="#Delegation4_US"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Represent"/>
+        <NamedIndividual IRI="#Delegation4_US"/>
+        <NamedIndividual IRI="#Country4_US"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Attend"/>
+        <NamedIndividual IRI="#Delegation5_GB"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Represent"/>
+        <NamedIndividual IRI="#Delegation5_GB"/>
+        <NamedIndividual IRI="#Country5_GB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Attend"/>
+        <NamedIndividual IRI="#Delegation6_Japan"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Represent"/>
+        <NamedIndividual IRI="#Delegation6_Japan"/>
+        <NamedIndividual IRI="#Country6_Japan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Attend"/>
+        <NamedIndividual IRI="#Delegation7_Belgium"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Represent"/>
+        <NamedIndividual IRI="#Delegation7_Belgium"/>
+        <NamedIndividual IRI="#Country7_Belgium"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Attend"/>
+        <NamedIndividual IRI="#Delegation8_China"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Represent"/>
+        <NamedIndividual IRI="#Delegation8_China"/>
+        <NamedIndividual IRI="#Country8_China"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Attend"/>
+        <NamedIndividual IRI="#Delegation9_Australia"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Represent"/>
+        <NamedIndividual IRI="#Delegation9_Australia"/>
+        <NamedIndividual IRI="#Country9_Australia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DisciplineOf"/>
+        <NamedIndividual IRI="#Discipline1_Tennis_Double"/>
+        <NamedIndividual IRI="#Sport4_Tennis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DisciplineOf"/>
+        <NamedIndividual IRI="#Discipline2_Tennis_Singles"/>
+        <NamedIndividual IRI="#Sport4_Tennis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DisciplineOf"/>
+        <NamedIndividual IRI="#Discipline3_Athletics_100M"/>
+        <NamedIndividual IRI="#Sport3_Athletics"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsPartOf"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsPartOf"/>
+        <NamedIndividual IRI="#Match1_Tennis_Double_Men_Random"/>
+        <NamedIndividual IRI="#Ordeal1_Tennis_Double_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Associate"/>
+        <NamedIndividual IRI="#Ordeal1_Tennis_Double_Men"/>
+        <NamedIndividual IRI="#Discipline1_Tennis_Double"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsPartOf"/>
+        <NamedIndividual IRI="#Ordeal1_Tennis_Double_Men"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Associate"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+        <NamedIndividual IRI="#Discipline3_Athletics_100M"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsPartOf"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#RecordOf"/>
+        <NamedIndividual IRI="#Record1_Tennis"/>
+        <NamedIndividual IRI="#Discipline1_Tennis_Double"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultMatch"/>
+        <NamedIndividual IRI="#Result1_team1_tennis"/>
+        <NamedIndividual IRI="#Match1_Tennis_Double_Men_Random"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultParticipant"/>
+        <NamedIndividual IRI="#Result1_team1_tennis"/>
+        <NamedIndividual IRI="#Team1_Tennis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultMatch"/>
+        <NamedIndividual IRI="#Result2_team2_tennis"/>
+        <NamedIndividual IRI="#Match1_Tennis_Double_Men_Random"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultParticipant"/>
+        <NamedIndividual IRI="#Result2_team2_tennis"/>
+        <NamedIndividual IRI="#Team2_Tennis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultMatch"/>
+        <NamedIndividual IRI="#Result_ADegrasse_Final_100m"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultParticipant"/>
+        <NamedIndividual IRI="#Result_ADegrasse_Final_100m"/>
+        <NamedIndividual IRI="#Athlete2_AndreDegrasse"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultMatch"/>
+        <NamedIndividual IRI="#Result_ASimbine_Final_100m"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultParticipant"/>
+        <NamedIndividual IRI="#Result_ASimbine_Final_100m"/>
+        <NamedIndividual IRI="#Athlete2_AkaniSimbine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultMatch"/>
+        <NamedIndividual IRI="#Result_BYMeite_Final_100M"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultParticipant"/>
+        <NamedIndividual IRI="#Result_BYMeite_Final_100M"/>
+        <NamedIndividual IRI="#Athlete2_BenYoussefMeite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultMatch"/>
+        <NamedIndividual IRI="#Result_JGATLIN_Final_100m"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultParticipant"/>
+        <NamedIndividual IRI="#Result_JGATLIN_Final_100m"/>
+        <NamedIndividual IRI="#Athlete2_JustinGatlin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultMatch"/>
+        <NamedIndividual IRI="#Result_JVicaut_Final_100m"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultParticipant"/>
+        <NamedIndividual IRI="#Result_JVicaut_Final_100m"/>
+        <NamedIndividual IRI="#Athlete2_JimmyVicaut"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultMatch"/>
+        <NamedIndividual IRI="#Result_TBromell_Final_100m"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultParticipant"/>
+        <NamedIndividual IRI="#Result_TBromell_Final_100m"/>
+        <NamedIndividual IRI="#Athlete2_TrayvonBromell"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultMatch"/>
+        <NamedIndividual IRI="#Result_UBolt_Final_100m"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultParticipant"/>
+        <NamedIndividual IRI="#Result_UBolt_Final_100m"/>
+        <NamedIndividual IRI="#Athlete2_UsainBolt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultMatch"/>
+        <NamedIndividual IRI="#Result_YBlake_Final_100m"/>
+        <NamedIndividual IRI="#Final_Athletics_100M_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ResultParticipant"/>
+        <NamedIndividual IRI="#Result_YBlake_Final_100m"/>
+        <NamedIndividual IRI="#Athlete2_YohanBlake"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Sponsors"/>
+        <NamedIndividual IRI="#Sponsor1_CocaCola"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Sponsors"/>
+        <NamedIndividual IRI="#Sponsor2_VISA"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Sponsors"/>
+        <NamedIndividual IRI="#Sponsor3_GeneralElectric"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Sponsors"/>
+        <NamedIndividual IRI="#Sponsor4_Intel"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Sponsors"/>
+        <NamedIndividual IRI="#Sponsor5_Samsung"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Sponsors"/>
+        <NamedIndividual IRI="#Sponsor6_AliBabaGroup"/>
+        <NamedIndividual IRI="#JO2016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Compete"/>
+        <NamedIndividual IRI="#Team1_Tennis"/>
+        <NamedIndividual IRI="#Ordeal1_Tennis_Double_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#From"/>
+        <NamedIndividual IRI="#Team1_Tennis"/>
+        <NamedIndividual IRI="#Country2_France"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Compete"/>
+        <NamedIndividual IRI="#Team2_Tennis"/>
+        <NamedIndividual IRI="#Ordeal1_Tennis_Double_Men"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#From"/>
+        <NamedIndividual IRI="#Team2_Tennis"/>
+        <NamedIndividual IRI="#Country10_Spain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#RecordOf"/>
+        <NamedIndividual IRI="#WorldRecord_Athletics_100m"/>
+        <NamedIndividual IRI="#Discipline3_Athletics_100M"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#RecordParticipant"/>
+        <NamedIndividual IRI="#WorldRecord_Athletics_100m"/>
+        <NamedIndividual IRI="#Athlete2_UsainBolt"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Athlete1_Tennis"/>
+        <Literal>Rafael NADAL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Athlete2_AkaniSimbine"/>
+        <Literal>Akani SIMBINE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Athlete2_AndreDegrasse"/>
+        <Literal>Andre DE GRASSE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Athlete2_BenYoussefMeite"/>
+        <Literal>Ben Youssef MEITE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Athlete2_JimmyVicaut"/>
+        <Literal>Jimmy VICAUT</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Athlete2_JustinGatlin"/>
+        <Literal>Justin GATLIN</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Athlete2_TrayvonBromell"/>
+        <Literal>Trayvon BROMELL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Athlete2_UsainBolt"/>
+        <Literal>Usain BOLT</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Athlete2_YohanBlake"/>
+        <Literal>Yohan BLAKE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Country10_Spain"/>
+        <Literal>Spain</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Country11_Jamaica"/>
+        <Literal>Jamaica</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Country12_Canada"/>
+        <Literal>Canada</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Country13_SouthAfrica"/>
+        <Literal>South Africa</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Country14_IvoryCoast"/>
+        <Literal>Ivory Coast</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Country1_Italy"/>
+        <Literal>Italy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Country2_France"/>
+        <Literal>France</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Country3_Maroc"/>
+        <Literal>Maroc</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Country4_US"/>
+        <Literal>united States</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Country5_GB"/>
+        <Literal>Great Britain</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Country6_Japan"/>
+        <Literal>Japan</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Country7_Belgium"/>
+        <Literal>Belgium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Country8_China"/>
+        <Literal>China</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Country9_Australia"/>
+        <Literal>Australia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Discipline1_Tennis_Double"/>
+        <Literal>Doubles</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Discipline2_Tennis_Singles"/>
+        <Literal>Singles</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Discipline3_Athletics_100M"/>
+        <Literal>100M</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id"/>
+        <NamedIndividual IRI="#JO2012"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#city"/>
+        <NamedIndividual IRI="#JO2012"/>
+        <Literal>London</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#JO2012"/>
+        <Literal>Great Britain</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date"/>
+        <NamedIndividual IRI="#JO2012"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2012-07-27T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#JO2012"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2012</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id"/>
+        <NamedIndividual IRI="#JO2016"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#city"/>
+        <NamedIndividual IRI="#JO2016"/>
+        <Literal>Rio de Janeiro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#JO2016"/>
+        <Literal>Brazil</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date"/>
+        <NamedIndividual IRI="#JO2016"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-05T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#JO2016"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id"/>
+        <NamedIndividual IRI="#Match1_Tennis_Double_Men_Random"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#city"/>
+        <NamedIndividual IRI="#Match1_Tennis_Double_Men_Random"/>
+        <Literal>Rio de Janeiro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date"/>
+        <NamedIndividual IRI="#Match1_Tennis_Double_Men_Random"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-15T09:10:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Match1_Tennis_Double_Men_Random"/>
+        <Literal>Match Double Men</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#sexe"/>
+        <NamedIndividual IRI="#Ordeal1_Tennis_Double_Men"/>
+        <Literal>Men</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#sexe"/>
+        <NamedIndividual IRI="#Ordeal2_Tennis_Double_Women"/>
+        <Literal>Women</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#sexe"/>
+        <NamedIndividual IRI="#Ordeal3_Athletics_100M_Men"/>
+        <Literal>Men</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#rank"/>
+        <NamedIndividual IRI="#Result1_team1_tennis"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#abandon"/>
+        <NamedIndividual IRI="#Result2_team2_tennis"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#rank"/>
+        <NamedIndividual IRI="#Result_ADegrasse_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Result_ADegrasse_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.91</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#rank"/>
+        <NamedIndividual IRI="#Result_ASimbine_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Result_ASimbine_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.94</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#rank"/>
+        <NamedIndividual IRI="#Result_BYMeite_Final_100M"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Result_BYMeite_Final_100M"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#rank"/>
+        <NamedIndividual IRI="#Result_JGATLIN_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Result_JGATLIN_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.89</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#rank"/>
+        <NamedIndividual IRI="#Result_JVicaut_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Result_JVicaut_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.04</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#rank"/>
+        <NamedIndividual IRI="#Result_TBromell_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Result_TBromell_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.06</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#rank"/>
+        <NamedIndividual IRI="#Result_UBolt_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Result_UBolt_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.81</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#rank"/>
+        <NamedIndividual IRI="#Result_YBlake_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Result_YBlake_Final_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.93</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Sponsor1_CocaCola"/>
+        <Literal>CocaCola</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Sponsor2_VISA"/>
+        <Literal>VISA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Sponsor3_GeneralElectric"/>
+        <Literal>General Electric</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Sponsor4_Intel"/>
+        <Literal>Intel</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Sponsor5_Samsung"/>
+        <Literal>Samsung</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Sponsor6_AliBabaGroup"/>
+        <Literal>AliBaba Group</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Sport1_Swimming"/>
+        <Literal>Swimming</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Sport2_Boxing"/>
+        <Literal>Boxing</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Sport3_Athletics"/>
+        <Literal>Athletics</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Sport4_Tennis"/>
+        <Literal>Tennis</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Team1_Tennis"/>
+        <Literal>Pierre-Hugues Herbert &amp; Nicolas Mahut</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Team2_Tennis"/>
+        <Literal>Marc López &amp; Rafael Nadal</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#WorldRecord_Athletics_100m"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.58</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Represent"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ResultParticipant"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Sponsors"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#Compose"/>
+        <ObjectProperty IRI="#ComposeBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#DisciplineOf"/>
+        <ObjectProperty IRI="#HasDiscipline"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#From"/>
+        <ObjectProperty IRI="#OriginateFrom"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#Have"/>
+        <ObjectProperty IRI="#IsPartOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#Record"/>
+        <ObjectProperty IRI="#RecordOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#SponsedBy"/>
+        <ObjectProperty IRI="#Sponsors"/>
+    </InverseObjectProperties>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#HasDiscipline"/>
+    </InverseFunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#Associate"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#DelegationParticipant"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#ResultMatch"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#ResultParticipant"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Associate"/>
+        <ObjectUnionOf>
+            <Class IRI="#Discipline"/>
+            <Class IRI="#Ordeal"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Attend"/>
+        <Class IRI="#Delegation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Belong"/>
+        <Class IRI="#Event_Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Compete"/>
+        <Class IRI="#Participant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Compose"/>
+        <Class IRI="#Athletic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ComposeBy"/>
+        <Class IRI="#Team"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#DisciplineOf"/>
+        <Class IRI="#Discipline"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#From"/>
+        <Class IRI="#Participant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HappenDate"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HappenPlace"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HasDiscipline"/>
+        <Class IRI="#Sport"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Have"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsPartOf"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#OriginateFrom"/>
+        <Class IRI="#Country"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#RecordDate"/>
+        <Class IRI="#Record"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#RecordOf"/>
+        <Class IRI="#Record"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#RecordParticipant"/>
+        <Class IRI="#Record"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Represent"/>
+        <Class IRI="#Delegation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ResultMatch"/>
+        <ObjectUnionOf>
+            <Class IRI="#Match"/>
+            <Class IRI="#Result"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ResultParticipant"/>
+        <ObjectUnionOf>
+            <Class IRI="#Participant"/>
+            <Class IRI="#Result"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#SponsedBy"/>
+        <Class IRI="#Sponsor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Sponsors"/>
+        <Class IRI="#Sponsor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Associate"/>
+        <ObjectUnionOf>
+            <Class IRI="#Discipline"/>
+            <Class IRI="#Ordeal"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Attend"/>
+        <Class IRI="#JO"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Belong"/>
+        <Class IRI="#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Compete"/>
+        <Class IRI="#Ordeal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Compose"/>
+        <Class IRI="#Team"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ComposeBy"/>
+        <Class IRI="#Athletic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#DisciplineOf"/>
+        <Class IRI="#Sport"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#From"/>
+        <Class IRI="#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HappenDate"/>
+        <Class IRI="#Event_Date"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HappenPlace"/>
+        <Class IRI="#Event_Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HasDiscipline"/>
+        <Class IRI="#Discipline"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Have"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IsPartOf"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#OriginateFrom"/>
+        <Class IRI="#Participant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#RecordDate"/>
+        <Class IRI="#Record_Date"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#RecordOf"/>
+        <Class IRI="#Discipline"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#RecordParticipant"/>
+        <Class IRI="#Participant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Represent"/>
+        <Class IRI="#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ResultMatch"/>
+        <ObjectUnionOf>
+            <Class IRI="#Match"/>
+            <Class IRI="#Result"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ResultParticipant"/>
+        <ObjectUnionOf>
+            <Class IRI="#Participant"/>
+            <Class IRI="#Result"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#SponsedBy"/>
+        <ObjectUnionOf>
+            <Class IRI="#Country"/>
+            <Class IRI="#Event"/>
+            <Class IRI="#Participant"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Sponsors"/>
+        <ObjectUnionOf>
+            <Class IRI="#Country"/>
+            <Class IRI="#Event"/>
+            <Class IRI="#Participant"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#rank"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#time"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Id"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Rule"/>
+        <Class IRI="#Discipline"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#abandon"/>
+        <Class IRI="#Result"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#age"/>
+        <Class IRI="#Athletic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#birthdate"/>
+        <Class IRI="#Athletic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#city"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#date"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#rank"/>
+        <Class IRI="#Result"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#score"/>
+        <Class IRI="#Result"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#year"/>
+        <Class IRI="#JO"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Id"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Rule"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#abandon"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#age"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#birthdate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#city"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#country"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#date"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#rank"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#score"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sexe"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

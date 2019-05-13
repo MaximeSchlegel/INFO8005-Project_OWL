@@ -84,6 +84,7 @@ Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_
 Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_TrayvonBromell>))
 Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_UsainBolt>))
 Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_YohanBlake>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Athletics_200M>))
 Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country10_Spain>))
 Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country11_Jamaica>))
 Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country12_Canada>))
@@ -147,7 +148,6 @@ Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Team1_Ten
 Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Team2_Tennis>))
 Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Usain_Bolt_example>))
 Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#WorldRecord_Athletics_100m>))
-Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#200_m>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/creator>))
 
 ############################
@@ -286,8 +286,9 @@ ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#Sponsors> ObjectU
 
 # Object Property: <http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant> (<http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant>)
 
-ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant> <http://www.uliege.be/ontologies/2019/2/JO#World_Record>)
-ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Participant>)
+SymmetricObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant>)
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Participant>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant> <http://www.uliege.be/ontologies/2019/2/JO#World_Record>)
 
 
 ############################
@@ -411,6 +412,7 @@ SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Ordeal> ObjectExactCardina
 
 SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Participant> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Result>))
 SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Participant> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#SponsedBy> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor>))
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Participant> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant> <http://www.uliege.be/ontologies/2019/2/JO#World_Record>))
 SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Participant> ObjectExactCardinality(1 <http://www.uliege.be/ontologies/2019/2/JO#From> <http://www.uliege.be/ontologies/2019/2/JO#Country>))
 
 # Class: <http://www.uliege.be/ontologies/2019/2/JO#Record_Score> (<http://www.uliege.be/ontologies/2019/2/JO#Record_Score>)
@@ -444,7 +446,6 @@ SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Team> ObjectMinCardinality
 # Class: <http://www.uliege.be/ontologies/2019/2/JO#World_Record> (<http://www.uliege.be/ontologies/2019/2/JO#World_Record>)
 
 SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#World_Record> <http://www.uliege.be/ontologies/2019/2/JO#Record>)
-SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#World_Record> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Participant>))
 
 
 ############################
@@ -519,6 +520,10 @@ ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Athletic> <http://www.
 ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Compete> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_YohanBlake> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men>)
 ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#From> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_YohanBlake> <http://www.uliege.be/ontologies/2019/2/JO#Country11_Jamaica>)
 DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_YohanBlake> "Yohan BLAKE")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Athletics_200M> (<http://www.uliege.be/ontologies/2019/2/JO#Athletics_200M>)
+
+ClassAssertion(<#World_Record> <http://www.uliege.be/ontologies/2019/2/JO#Athletics_200M>)
 
 # Individual: <http://www.uliege.be/ontologies/2019/2/JO#Country10_Spain> (<http://www.uliege.be/ontologies/2019/2/JO#Country10_Spain>)
 
@@ -899,7 +904,7 @@ DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://w
 # Individual: <http://www.uliege.be/ontologies/2019/2/JO#Usain_Bolt_example> (<http://www.uliege.be/ontologies/2019/2/JO#Usain_Bolt_example>)
 
 ClassAssertion(<#Participant> <http://www.uliege.be/ontologies/2019/2/JO#Usain_Bolt_example>)
-ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Usain_Bolt_example> <http://www.uliege.be/ontologies/2019/2/JO#200_m>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Usain_Bolt_example> <http://www.uliege.be/ontologies/2019/2/JO#Athletics_200M>)
 
 # Individual: <http://www.uliege.be/ontologies/2019/2/JO#WorldRecord_Athletics_100m> (<http://www.uliege.be/ontologies/2019/2/JO#WorldRecord_Athletics_100m>)
 
@@ -907,10 +912,6 @@ ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Record_Time> <http://w
 ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#RecordOf> <http://www.uliege.be/ontologies/2019/2/JO#WorldRecord_Athletics_100m> <http://www.uliege.be/ontologies/2019/2/JO#Discipline3_Athletics_100M>)
 ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#RecordParticipant> <http://www.uliege.be/ontologies/2019/2/JO#WorldRecord_Athletics_100m> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_UsainBolt>)
 DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#time> <http://www.uliege.be/ontologies/2019/2/JO#WorldRecord_Athletics_100m> "9.58"^^xsd:decimal)
-
-# Individual: <http://www.uliege.be/ontologies/2019/2/JO#200_m> (<http://www.uliege.be/ontologies/2019/2/JO#200_m>)
-
-ClassAssertion(<#World_Record> <http://www.uliege.be/ontologies/2019/2/JO#200_m>)
 
 
 )

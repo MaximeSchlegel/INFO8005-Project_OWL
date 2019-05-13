@@ -1,73 +1,916 @@
+Prefix(:=<http://www.uliege.be/ontologies/2019/2/JO>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(time:=<http://www.w3.org/2006/time#>)
 
 
-Ontology(
-Declaration(Class(<#Man>))
-Declaration(Class(<#Person>))
-Declaration(Class(<#University>))
-Declaration(Class(<#Woman>))
-Declaration(ObjectProperty(<#isEnrolledIn>))
-Declaration(NamedIndividual(<#Fabien>))
-Declaration(NamedIndividual(<#Marine>))
-Declaration(NamedIndividual(<#Maxime>))
-Declaration(NamedIndividual(<#Mourad>))
-Declaration(NamedIndividual(<#Uliege>))
+Ontology(<http://www.uliege.be/ontologies/2019/2/JO>
+<http://www.uliege.be/ontologies/2019/2/JO/1.0>
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Chauvin & Schlegel & Mamassi")
+Annotation(rdfs:label "Project 2019 Semantic Data")
+Annotation(owl:priorVersion "1.0"^^xsd:float)
+
+Declaration(Class(<#Participant>))
+Declaration(Class(<#World_Record>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Athletic>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Country>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Delegation>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Discipline>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Event>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Event_Date>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Event_Place>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#JO>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Match>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Ordeal>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Participant>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Record>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Record_Date>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Record_Score>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Record_Time>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Result>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Sponsor>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Sport>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#Team>))
+Declaration(Class(<http://www.uliege.be/ontologies/2019/2/JO#World_Record>))
+Declaration(Class(time:DataTimeDescription))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#Associate>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#Attend>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#Belong>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#Compete>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#Compose>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#ComposeBy>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#DelegationParticipant>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#DisciplineOf>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#From>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#HappenDate>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#HappenPlace>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#HasDiscipline>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#Have>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#IsPartOf>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#OriginateFrom>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#Record>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#RecordDate>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#RecordOf>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#RecordParticipant>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#Represent>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#ResultMatch>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#SponsedBy>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#Sponsors>))
+Declaration(ObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant>))
+Declaration(DataProperty(<http://www.uliege.be/ontologies/2019/2/JO#Id>))
+Declaration(DataProperty(<http://www.uliege.be/ontologies/2019/2/JO#Rule>))
+Declaration(DataProperty(<http://www.uliege.be/ontologies/2019/2/JO#abandon>))
+Declaration(DataProperty(<http://www.uliege.be/ontologies/2019/2/JO#age>))
+Declaration(DataProperty(<http://www.uliege.be/ontologies/2019/2/JO#birthdate>))
+Declaration(DataProperty(<http://www.uliege.be/ontologies/2019/2/JO#city>))
+Declaration(DataProperty(<http://www.uliege.be/ontologies/2019/2/JO#country>))
+Declaration(DataProperty(<http://www.uliege.be/ontologies/2019/2/JO#date>))
+Declaration(DataProperty(<http://www.uliege.be/ontologies/2019/2/JO#name>))
+Declaration(DataProperty(<http://www.uliege.be/ontologies/2019/2/JO#rank>))
+Declaration(DataProperty(<http://www.uliege.be/ontologies/2019/2/JO#score>))
+Declaration(DataProperty(<http://www.uliege.be/ontologies/2019/2/JO#sexe>))
+Declaration(DataProperty(<http://www.uliege.be/ontologies/2019/2/JO#time>))
+Declaration(DataProperty(<http://www.uliege.be/ontologies/2019/2/JO#year>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Athlete1_Tennis>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AkaniSimbine>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AndreDegrasse>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_BenYoussefMeite>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JimmyVicaut>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JustinGatlin>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_TrayvonBromell>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_UsainBolt>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_YohanBlake>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country10_Spain>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country11_Jamaica>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country12_Canada>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country13_SouthAfrica>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country14_IvoryCoast>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country1_Italy>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country2_France>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country3_Maroc>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country4_US>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country5_GB>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country6_Japan>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country7_Belgium>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country8_China>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Country9_Australia>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Delegation10_Spain>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Delegation11_Jamaica>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Delegation12_Canada>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Delegation13_SouthAfrica>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Delegation14_IvoryCoast>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Delegation1_Italy>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Delegation2_France>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Delegation3_Maroc>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Delegation4_US>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Delegation5_GB>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Delegation6_Japan>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Delegation7_Belgium>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Delegation8_China>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Delegation9_Australia>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Discipline1_Tennis_Double>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Discipline2_Tennis_Singles>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Discipline3_Athletics_100M>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Final_Athletics_100M_Men>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#JO2012>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#JO2016>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Match1_Tennis_Double_Men_Random>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Ordeal1_Tennis_Double_Men>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Ordeal2_Tennis_Double_Women>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Record1_Tennis>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Result1_team1_tennis>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Result2_team2_tennis>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Result_ADegrasse_Final_100m>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Result_ASimbine_Final_100m>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Result_BYMeite_Final_100M>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Result_JGATLIN_Final_100m>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Result_JVicaut_Final_100m>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Result_TBromell_Final_100m>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Result_UBolt_Final_100m>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Result_YBlake_Final_100m>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Sponsor1_CocaCola>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Sponsor2_VISA>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Sponsor3_GeneralElectric>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Sponsor4_Intel>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Sponsor5_Samsung>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Sponsor6_AliBabaGroup>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Sport1_Swimming>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Sport2_Boxing>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Sport3_Athletics>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Sport4_Tennis>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Team1_Tennis>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Team2_Tennis>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#Usain_Bolt_example>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#WorldRecord_Athletics_100m>))
+Declaration(NamedIndividual(<http://www.uliege.be/ontologies/2019/2/JO#200_m>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/creator>))
+
 ############################
 #   Object Properties
 ############################
 
-# Object Property: <#isEnrolledIn> (<#isEnrolledIn>)
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#Associate> (<http://www.uliege.be/ontologies/2019/2/JO#Associate>)
 
-ObjectPropertyDomain(<#isEnrolledIn> <#Person>)
-ObjectPropertyRange(<#isEnrolledIn> <#University>)
+SymmetricObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#Associate>)
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#Associate> ObjectUnionOf(<http://www.uliege.be/ontologies/2019/2/JO#Discipline> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal>))
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#Associate> ObjectUnionOf(<http://www.uliege.be/ontologies/2019/2/JO#Discipline> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal>))
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#Attend> (<http://www.uliege.be/ontologies/2019/2/JO#Attend>)
+
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#Attend> <http://www.uliege.be/ontologies/2019/2/JO#Delegation>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#Attend> <http://www.uliege.be/ontologies/2019/2/JO#JO>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#Belong> (<http://www.uliege.be/ontologies/2019/2/JO#Belong>)
+
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#Belong> <http://www.uliege.be/ontologies/2019/2/JO#Event_Place>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#Belong> <http://www.uliege.be/ontologies/2019/2/JO#Country>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#Compete> (<http://www.uliege.be/ontologies/2019/2/JO#Compete>)
+
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#Compete> <http://www.uliege.be/ontologies/2019/2/JO#Participant>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#Compete> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#Compose> (<http://www.uliege.be/ontologies/2019/2/JO#Compose>)
+
+InverseObjectProperties(<http://www.uliege.be/ontologies/2019/2/JO#Compose> <http://www.uliege.be/ontologies/2019/2/JO#ComposeBy>)
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#Compose> <http://www.uliege.be/ontologies/2019/2/JO#Athletic>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#Compose> <http://www.uliege.be/ontologies/2019/2/JO#Team>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#ComposeBy> (<http://www.uliege.be/ontologies/2019/2/JO#ComposeBy>)
+
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#ComposeBy> <http://www.uliege.be/ontologies/2019/2/JO#Team>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#ComposeBy> <http://www.uliege.be/ontologies/2019/2/JO#Athletic>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#DelegationParticipant> (<http://www.uliege.be/ontologies/2019/2/JO#DelegationParticipant>)
+
+SymmetricObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#DelegationParticipant>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#DisciplineOf> (<http://www.uliege.be/ontologies/2019/2/JO#DisciplineOf>)
+
+InverseObjectProperties(<http://www.uliege.be/ontologies/2019/2/JO#DisciplineOf> <http://www.uliege.be/ontologies/2019/2/JO#HasDiscipline>)
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#DisciplineOf> <http://www.uliege.be/ontologies/2019/2/JO#Discipline>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#DisciplineOf> <http://www.uliege.be/ontologies/2019/2/JO#Sport>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#From> (<http://www.uliege.be/ontologies/2019/2/JO#From>)
+
+InverseObjectProperties(<http://www.uliege.be/ontologies/2019/2/JO#From> <http://www.uliege.be/ontologies/2019/2/JO#OriginateFrom>)
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#From> <http://www.uliege.be/ontologies/2019/2/JO#Participant>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#From> <http://www.uliege.be/ontologies/2019/2/JO#Country>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#HappenDate> (<http://www.uliege.be/ontologies/2019/2/JO#HappenDate>)
+
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#HappenDate> <http://www.uliege.be/ontologies/2019/2/JO#Event>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#HappenDate> <http://www.uliege.be/ontologies/2019/2/JO#Event_Date>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#HappenPlace> (<http://www.uliege.be/ontologies/2019/2/JO#HappenPlace>)
+
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#HappenPlace> <http://www.uliege.be/ontologies/2019/2/JO#Event>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#HappenPlace> <http://www.uliege.be/ontologies/2019/2/JO#Event_Place>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#HasDiscipline> (<http://www.uliege.be/ontologies/2019/2/JO#HasDiscipline>)
+
+InverseFunctionalObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#HasDiscipline>)
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#HasDiscipline> <http://www.uliege.be/ontologies/2019/2/JO#Sport>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#HasDiscipline> <http://www.uliege.be/ontologies/2019/2/JO#Discipline>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#Have> (<http://www.uliege.be/ontologies/2019/2/JO#Have>)
+
+InverseObjectProperties(<http://www.uliege.be/ontologies/2019/2/JO#Have> <http://www.uliege.be/ontologies/2019/2/JO#IsPartOf>)
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#Have> <http://www.uliege.be/ontologies/2019/2/JO#Event>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#Have> <http://www.uliege.be/ontologies/2019/2/JO#Event>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#IsPartOf> (<http://www.uliege.be/ontologies/2019/2/JO#IsPartOf>)
+
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#IsPartOf> <http://www.uliege.be/ontologies/2019/2/JO#Event>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#IsPartOf> <http://www.uliege.be/ontologies/2019/2/JO#Event>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#OriginateFrom> (<http://www.uliege.be/ontologies/2019/2/JO#OriginateFrom>)
+
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#OriginateFrom> <http://www.uliege.be/ontologies/2019/2/JO#Country>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#OriginateFrom> <http://www.uliege.be/ontologies/2019/2/JO#Participant>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#Record> (<http://www.uliege.be/ontologies/2019/2/JO#Record>)
+
+InverseObjectProperties(<http://www.uliege.be/ontologies/2019/2/JO#Record> <http://www.uliege.be/ontologies/2019/2/JO#RecordOf>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#RecordDate> (<http://www.uliege.be/ontologies/2019/2/JO#RecordDate>)
+
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#RecordDate> <http://www.uliege.be/ontologies/2019/2/JO#Record>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#RecordDate> <http://www.uliege.be/ontologies/2019/2/JO#Record_Date>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#RecordOf> (<http://www.uliege.be/ontologies/2019/2/JO#RecordOf>)
+
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#RecordOf> <http://www.uliege.be/ontologies/2019/2/JO#Record>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#RecordOf> <http://www.uliege.be/ontologies/2019/2/JO#Discipline>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#RecordParticipant> (<http://www.uliege.be/ontologies/2019/2/JO#RecordParticipant>)
+
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#RecordParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Record>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#RecordParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Participant>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#Represent> (<http://www.uliege.be/ontologies/2019/2/JO#Represent>)
+
+SubObjectPropertyOf(<http://www.uliege.be/ontologies/2019/2/JO#Represent> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#Represent> <http://www.uliege.be/ontologies/2019/2/JO#Delegation>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#Represent> <http://www.uliege.be/ontologies/2019/2/JO#Country>)
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#ResultMatch> (<http://www.uliege.be/ontologies/2019/2/JO#ResultMatch>)
+
+SymmetricObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#ResultMatch>)
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#ResultMatch> ObjectUnionOf(<http://www.uliege.be/ontologies/2019/2/JO#Match> <http://www.uliege.be/ontologies/2019/2/JO#Result>))
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#ResultMatch> ObjectUnionOf(<http://www.uliege.be/ontologies/2019/2/JO#Match> <http://www.uliege.be/ontologies/2019/2/JO#Result>))
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> (<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant>)
+
+SubObjectPropertyOf(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> owl:topObjectProperty)
+SymmetricObjectProperty(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant>)
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> ObjectUnionOf(<http://www.uliege.be/ontologies/2019/2/JO#Participant> <http://www.uliege.be/ontologies/2019/2/JO#Result>))
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> ObjectUnionOf(<http://www.uliege.be/ontologies/2019/2/JO#Participant> <http://www.uliege.be/ontologies/2019/2/JO#Result>))
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#SponsedBy> (<http://www.uliege.be/ontologies/2019/2/JO#SponsedBy>)
+
+InverseObjectProperties(<http://www.uliege.be/ontologies/2019/2/JO#SponsedBy> <http://www.uliege.be/ontologies/2019/2/JO#Sponsors>)
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#SponsedBy> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#SponsedBy> ObjectUnionOf(<http://www.uliege.be/ontologies/2019/2/JO#Country> <http://www.uliege.be/ontologies/2019/2/JO#Event> <http://www.uliege.be/ontologies/2019/2/JO#Participant>))
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#Sponsors> (<http://www.uliege.be/ontologies/2019/2/JO#Sponsors>)
+
+SubObjectPropertyOf(<http://www.uliege.be/ontologies/2019/2/JO#Sponsors> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#Sponsors> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#Sponsors> ObjectUnionOf(<http://www.uliege.be/ontologies/2019/2/JO#Country> <http://www.uliege.be/ontologies/2019/2/JO#Event> <http://www.uliege.be/ontologies/2019/2/JO#Participant>))
+
+# Object Property: <http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant> (<http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant>)
+
+ObjectPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant> <http://www.uliege.be/ontologies/2019/2/JO#World_Record>)
+ObjectPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Participant>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://www.uliege.be/ontologies/2019/2/JO#Id> (<http://www.uliege.be/ontologies/2019/2/JO#Id>)
+
+DataPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#Id> <http://www.uliege.be/ontologies/2019/2/JO#Event>)
+DataPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#Id> xsd:int)
+
+# Data Property: <http://www.uliege.be/ontologies/2019/2/JO#Rule> (<http://www.uliege.be/ontologies/2019/2/JO#Rule>)
+
+DataPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#Rule> <http://www.uliege.be/ontologies/2019/2/JO#Discipline>)
+DataPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#Rule> xsd:anyURI)
+
+# Data Property: <http://www.uliege.be/ontologies/2019/2/JO#abandon> (<http://www.uliege.be/ontologies/2019/2/JO#abandon>)
+
+DataPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#abandon> <http://www.uliege.be/ontologies/2019/2/JO#Result>)
+DataPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#abandon> xsd:boolean)
+
+# Data Property: <http://www.uliege.be/ontologies/2019/2/JO#age> (<http://www.uliege.be/ontologies/2019/2/JO#age>)
+
+DataPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#age> <http://www.uliege.be/ontologies/2019/2/JO#Athletic>)
+DataPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#age> xsd:integer)
+
+# Data Property: <http://www.uliege.be/ontologies/2019/2/JO#birthdate> (<http://www.uliege.be/ontologies/2019/2/JO#birthdate>)
+
+DataPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#birthdate> <http://www.uliege.be/ontologies/2019/2/JO#Athletic>)
+DataPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#birthdate> xsd:dateTime)
+
+# Data Property: <http://www.uliege.be/ontologies/2019/2/JO#city> (<http://www.uliege.be/ontologies/2019/2/JO#city>)
+
+DataPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#city> <http://www.uliege.be/ontologies/2019/2/JO#Event>)
+DataPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#city> xsd:string)
+
+# Data Property: <http://www.uliege.be/ontologies/2019/2/JO#country> (<http://www.uliege.be/ontologies/2019/2/JO#country>)
+
+DataPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#country> xsd:string)
+
+# Data Property: <http://www.uliege.be/ontologies/2019/2/JO#date> (<http://www.uliege.be/ontologies/2019/2/JO#date>)
+
+DataPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#date> <http://www.uliege.be/ontologies/2019/2/JO#Event>)
+DataPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#date> xsd:dateTime)
+
+# Data Property: <http://www.uliege.be/ontologies/2019/2/JO#name> (<http://www.uliege.be/ontologies/2019/2/JO#name>)
+
+DataPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#name> xsd:string)
+
+# Data Property: <http://www.uliege.be/ontologies/2019/2/JO#rank> (<http://www.uliege.be/ontologies/2019/2/JO#rank>)
+
+SubDataPropertyOf(<http://www.uliege.be/ontologies/2019/2/JO#rank> owl:topDataProperty)
+DataPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#rank> <http://www.uliege.be/ontologies/2019/2/JO#Result>)
+DataPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#rank> xsd:integer)
+
+# Data Property: <http://www.uliege.be/ontologies/2019/2/JO#score> (<http://www.uliege.be/ontologies/2019/2/JO#score>)
+
+DataPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#score> <http://www.uliege.be/ontologies/2019/2/JO#Result>)
+DataPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#score> DataUnionOf(xsd:dateTimeStamp xsd:integer))
+
+# Data Property: <http://www.uliege.be/ontologies/2019/2/JO#sexe> (<http://www.uliege.be/ontologies/2019/2/JO#sexe>)
+
+DataPropertyRange(<http://www.uliege.be/ontologies/2019/2/JO#sexe> xsd:string)
+
+# Data Property: <http://www.uliege.be/ontologies/2019/2/JO#time> (<http://www.uliege.be/ontologies/2019/2/JO#time>)
+
+SubDataPropertyOf(<http://www.uliege.be/ontologies/2019/2/JO#time> owl:topDataProperty)
+
+# Data Property: <http://www.uliege.be/ontologies/2019/2/JO#year> (<http://www.uliege.be/ontologies/2019/2/JO#year>)
+
+DataPropertyDomain(<http://www.uliege.be/ontologies/2019/2/JO#year> <http://www.uliege.be/ontologies/2019/2/JO#JO>)
+
 
 
 ############################
 #   Classes
 ############################
 
-# Class: <#Man> (<#Man>)
+# Class: <http://www.uliege.be/ontologies/2019/2/JO#Athletic> (<http://www.uliege.be/ontologies/2019/2/JO#Athletic>)
 
-SubClassOf(<#Man> <#Person>)
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Athletic> <http://www.uliege.be/ontologies/2019/2/JO#Participant>)
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Athletic> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#Compose> <http://www.uliege.be/ontologies/2019/2/JO#Team>))
 
-# Class: <#Person> (<#Person>)
+# Class: <http://www.uliege.be/ontologies/2019/2/JO#Country> (<http://www.uliege.be/ontologies/2019/2/JO#Country>)
 
-SubClassOf(<#Person> ObjectSomeValuesFrom(<#isEnrolledIn> <#University>))
-SubClassOf(<#Person> ObjectExactCardinality(1 <#isEnrolledIn> <#University>))
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Country> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#OriginateFrom> <http://www.uliege.be/ontologies/2019/2/JO#Participant>))
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Country> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#SponsedBy> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor>))
 
-# Class: <#Woman> (<#Woman>)
+# Class: <http://www.uliege.be/ontologies/2019/2/JO#Discipline> (<http://www.uliege.be/ontologies/2019/2/JO#Discipline>)
 
-SubClassOf(<#Woman> <#Person>)
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Discipline> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#Associate> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal>))
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Discipline> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#DisciplineOf> <http://www.uliege.be/ontologies/2019/2/JO#Sport>))
+
+# Class: <http://www.uliege.be/ontologies/2019/2/JO#Event> (<http://www.uliege.be/ontologies/2019/2/JO#Event>)
+
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Event> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#SponsedBy> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor>))
+
+# Class: <http://www.uliege.be/ontologies/2019/2/JO#Event_Date> (<http://www.uliege.be/ontologies/2019/2/JO#Event_Date>)
+
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Event_Date> time:DataTimeDescription)
+
+# Class: <http://www.uliege.be/ontologies/2019/2/JO#JO> (<http://www.uliege.be/ontologies/2019/2/JO#JO>)
+
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#JO> <http://www.uliege.be/ontologies/2019/2/JO#Event>)
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#JO> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#Have> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal>))
+
+# Class: <http://www.uliege.be/ontologies/2019/2/JO#Match> (<http://www.uliege.be/ontologies/2019/2/JO#Match>)
+
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Match> <http://www.uliege.be/ontologies/2019/2/JO#Event>)
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Match> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#ResultMatch> <http://www.uliege.be/ontologies/2019/2/JO#Result>))
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Match> ObjectExactCardinality(1 <http://www.uliege.be/ontologies/2019/2/JO#IsPartOf> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal>))
+
+# Class: <http://www.uliege.be/ontologies/2019/2/JO#Ordeal> (<http://www.uliege.be/ontologies/2019/2/JO#Ordeal>)
+
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Ordeal> <http://www.uliege.be/ontologies/2019/2/JO#Event>)
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Ordeal> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#Have> <http://www.uliege.be/ontologies/2019/2/JO#Match>))
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Ordeal> ObjectExactCardinality(1 <http://www.uliege.be/ontologies/2019/2/JO#Associate> <http://www.uliege.be/ontologies/2019/2/JO#Discipline>))
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Ordeal> ObjectExactCardinality(1 <http://www.uliege.be/ontologies/2019/2/JO#IsPartOf> <http://www.uliege.be/ontologies/2019/2/JO#JO>))
+
+# Class: <http://www.uliege.be/ontologies/2019/2/JO#Participant> (<http://www.uliege.be/ontologies/2019/2/JO#Participant>)
+
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Participant> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Result>))
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Participant> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#SponsedBy> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor>))
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Participant> ObjectExactCardinality(1 <http://www.uliege.be/ontologies/2019/2/JO#From> <http://www.uliege.be/ontologies/2019/2/JO#Country>))
+
+# Class: <http://www.uliege.be/ontologies/2019/2/JO#Record_Score> (<http://www.uliege.be/ontologies/2019/2/JO#Record_Score>)
+
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Record_Score> <http://www.uliege.be/ontologies/2019/2/JO#Record>)
+
+# Class: <http://www.uliege.be/ontologies/2019/2/JO#Record_Time> (<http://www.uliege.be/ontologies/2019/2/JO#Record_Time>)
+
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Record_Time> <http://www.uliege.be/ontologies/2019/2/JO#Record>)
+
+# Class: <http://www.uliege.be/ontologies/2019/2/JO#Result> (<http://www.uliege.be/ontologies/2019/2/JO#Result>)
+
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Result> ObjectExactCardinality(1 <http://www.uliege.be/ontologies/2019/2/JO#ResultMatch> <http://www.uliege.be/ontologies/2019/2/JO#Match>))
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Result> ObjectExactCardinality(1 <http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Participant>))
+
+# Class: <http://www.uliege.be/ontologies/2019/2/JO#Sponsor> (<http://www.uliege.be/ontologies/2019/2/JO#Sponsor>)
+
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Sponsor> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#Sponsors> <http://www.uliege.be/ontologies/2019/2/JO#Country>))
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Sponsor> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#Sponsors> <http://www.uliege.be/ontologies/2019/2/JO#Event>))
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Sponsor> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#Sponsors> <http://www.uliege.be/ontologies/2019/2/JO#Participant>))
+
+# Class: <http://www.uliege.be/ontologies/2019/2/JO#Sport> (<http://www.uliege.be/ontologies/2019/2/JO#Sport>)
+
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Sport> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#HasDiscipline> <http://www.uliege.be/ontologies/2019/2/JO#Discipline>))
+
+# Class: <http://www.uliege.be/ontologies/2019/2/JO#Team> (<http://www.uliege.be/ontologies/2019/2/JO#Team>)
+
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Team> <http://www.uliege.be/ontologies/2019/2/JO#Participant>)
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#Team> ObjectMinCardinality(1 <http://www.uliege.be/ontologies/2019/2/JO#ComposeBy> <http://www.uliege.be/ontologies/2019/2/JO#Athletic>))
+
+# Class: <http://www.uliege.be/ontologies/2019/2/JO#World_Record> (<http://www.uliege.be/ontologies/2019/2/JO#World_Record>)
+
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#World_Record> <http://www.uliege.be/ontologies/2019/2/JO#Record>)
+SubClassOf(<http://www.uliege.be/ontologies/2019/2/JO#World_Record> ObjectSomeValuesFrom(<http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Participant>))
 
 
 ############################
 #   Named Individuals
 ############################
 
-# Individual: <#Fabien> (<#Fabien>)
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Athlete1_Tennis> (<http://www.uliege.be/ontologies/2019/2/JO#Athlete1_Tennis>)
 
-ClassAssertion(<#Man> <#Fabien>)
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Athletic> <http://www.uliege.be/ontologies/2019/2/JO#Athlete1_Tennis>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#DelegationParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Athlete1_Tennis> <http://www.uliege.be/ontologies/2019/2/JO#Delegation10_Spain>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Athlete1_Tennis> "Rafael NADAL")
 
-# Individual: <#Marine> (<#Marine>)
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AkaniSimbine> (<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AkaniSimbine>)
 
-ClassAssertion(<#Woman> <#Marine>)
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Athletic> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AkaniSimbine>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Compete> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AkaniSimbine> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#DelegationParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AkaniSimbine> <http://www.uliege.be/ontologies/2019/2/JO#Delegation13_SouthAfrica>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#From> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AkaniSimbine> <http://www.uliege.be/ontologies/2019/2/JO#Country13_SouthAfrica>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AkaniSimbine> "Akani SIMBINE")
 
-# Individual: <#Maxime> (<#Maxime>)
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AndreDegrasse> (<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AndreDegrasse>)
 
-ClassAssertion(<#Man> <#Maxime>)
-ObjectPropertyAssertion(<#isEnrolledIn> <#Maxime> <#Uliege>)
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Athletic> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AndreDegrasse>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Compete> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AndreDegrasse> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#DelegationParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AndreDegrasse> <http://www.uliege.be/ontologies/2019/2/JO#Delegation12_Canada>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#From> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AndreDegrasse> <http://www.uliege.be/ontologies/2019/2/JO#Country12_Canada>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AndreDegrasse> "Andre DE GRASSE")
 
-# Individual: <#Mourad> (<#Mourad>)
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_BenYoussefMeite> (<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_BenYoussefMeite>)
 
-ClassAssertion(<#Man> <#Mourad>)
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Athletic> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_BenYoussefMeite>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Compete> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_BenYoussefMeite> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#DelegationParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_BenYoussefMeite> <http://www.uliege.be/ontologies/2019/2/JO#Delegation14_IvoryCoast>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#From> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_BenYoussefMeite> <http://www.uliege.be/ontologies/2019/2/JO#Country14_IvoryCoast>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_BenYoussefMeite> "Ben Youssef MEITE")
 
-# Individual: <#Uliege> (<#Uliege>)
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JimmyVicaut> (<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JimmyVicaut>)
 
-ClassAssertion(<#University> <#Uliege>)
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Athletic> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JimmyVicaut>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Compete> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JimmyVicaut> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#DelegationParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JimmyVicaut> <http://www.uliege.be/ontologies/2019/2/JO#Delegation2_France>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#From> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JimmyVicaut> <http://www.uliege.be/ontologies/2019/2/JO#Country2_France>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JimmyVicaut> "Jimmy VICAUT")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JustinGatlin> (<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JustinGatlin>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Athletic> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JustinGatlin>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Compete> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JustinGatlin> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#DelegationParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JustinGatlin> <http://www.uliege.be/ontologies/2019/2/JO#Delegation4_US>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#From> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JustinGatlin> <http://www.uliege.be/ontologies/2019/2/JO#Country4_US>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JustinGatlin> "Justin GATLIN")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_TrayvonBromell> (<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_TrayvonBromell>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Athletic> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_TrayvonBromell>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Compete> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_TrayvonBromell> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#DelegationParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_TrayvonBromell> <http://www.uliege.be/ontologies/2019/2/JO#Delegation4_US>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#From> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_TrayvonBromell> <http://www.uliege.be/ontologies/2019/2/JO#Country4_US>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_TrayvonBromell> "Trayvon BROMELL")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_UsainBolt> (<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_UsainBolt>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Athletic> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_UsainBolt>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Compete> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_UsainBolt> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#DelegationParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_UsainBolt> <http://www.uliege.be/ontologies/2019/2/JO#Delegation11_Jamaica>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#From> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_UsainBolt> <http://www.uliege.be/ontologies/2019/2/JO#Country11_Jamaica>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_UsainBolt> "Usain BOLT")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_YohanBlake> (<http://www.uliege.be/ontologies/2019/2/JO#Athlete2_YohanBlake>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Athletic> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_YohanBlake>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Compete> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_YohanBlake> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#From> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_YohanBlake> <http://www.uliege.be/ontologies/2019/2/JO#Country11_Jamaica>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_YohanBlake> "Yohan BLAKE")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Country10_Spain> (<http://www.uliege.be/ontologies/2019/2/JO#Country10_Spain>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Country> <http://www.uliege.be/ontologies/2019/2/JO#Country10_Spain>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#country> <http://www.uliege.be/ontologies/2019/2/JO#Country10_Spain> "Spain")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Country11_Jamaica> (<http://www.uliege.be/ontologies/2019/2/JO#Country11_Jamaica>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Country> <http://www.uliege.be/ontologies/2019/2/JO#Country11_Jamaica>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#country> <http://www.uliege.be/ontologies/2019/2/JO#Country11_Jamaica> "Jamaica")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Country12_Canada> (<http://www.uliege.be/ontologies/2019/2/JO#Country12_Canada>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Country> <http://www.uliege.be/ontologies/2019/2/JO#Country12_Canada>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#country> <http://www.uliege.be/ontologies/2019/2/JO#Country12_Canada> "Canada")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Country13_SouthAfrica> (<http://www.uliege.be/ontologies/2019/2/JO#Country13_SouthAfrica>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Country> <http://www.uliege.be/ontologies/2019/2/JO#Country13_SouthAfrica>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#country> <http://www.uliege.be/ontologies/2019/2/JO#Country13_SouthAfrica> "South Africa")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Country14_IvoryCoast> (<http://www.uliege.be/ontologies/2019/2/JO#Country14_IvoryCoast>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Country> <http://www.uliege.be/ontologies/2019/2/JO#Country14_IvoryCoast>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#country> <http://www.uliege.be/ontologies/2019/2/JO#Country14_IvoryCoast> "Ivory Coast")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Country1_Italy> (<http://www.uliege.be/ontologies/2019/2/JO#Country1_Italy>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Country> <http://www.uliege.be/ontologies/2019/2/JO#Country1_Italy>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#country> <http://www.uliege.be/ontologies/2019/2/JO#Country1_Italy> "Italy")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Country2_France> (<http://www.uliege.be/ontologies/2019/2/JO#Country2_France>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Country> <http://www.uliege.be/ontologies/2019/2/JO#Country2_France>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#country> <http://www.uliege.be/ontologies/2019/2/JO#Country2_France> "France")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Country3_Maroc> (<http://www.uliege.be/ontologies/2019/2/JO#Country3_Maroc>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Country> <http://www.uliege.be/ontologies/2019/2/JO#Country3_Maroc>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#country> <http://www.uliege.be/ontologies/2019/2/JO#Country3_Maroc> "Maroc")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Country4_US> (<http://www.uliege.be/ontologies/2019/2/JO#Country4_US>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Country> <http://www.uliege.be/ontologies/2019/2/JO#Country4_US>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#country> <http://www.uliege.be/ontologies/2019/2/JO#Country4_US> "united States")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Country5_GB> (<http://www.uliege.be/ontologies/2019/2/JO#Country5_GB>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Country> <http://www.uliege.be/ontologies/2019/2/JO#Country5_GB>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#country> <http://www.uliege.be/ontologies/2019/2/JO#Country5_GB> "Great Britain")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Country6_Japan> (<http://www.uliege.be/ontologies/2019/2/JO#Country6_Japan>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Country> <http://www.uliege.be/ontologies/2019/2/JO#Country6_Japan>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#country> <http://www.uliege.be/ontologies/2019/2/JO#Country6_Japan> "Japan")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Country7_Belgium> (<http://www.uliege.be/ontologies/2019/2/JO#Country7_Belgium>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Country> <http://www.uliege.be/ontologies/2019/2/JO#Country7_Belgium>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#country> <http://www.uliege.be/ontologies/2019/2/JO#Country7_Belgium> "Belgium")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Country8_China> (<http://www.uliege.be/ontologies/2019/2/JO#Country8_China>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Country> <http://www.uliege.be/ontologies/2019/2/JO#Country8_China>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#country> <http://www.uliege.be/ontologies/2019/2/JO#Country8_China> "China")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Country9_Australia> (<http://www.uliege.be/ontologies/2019/2/JO#Country9_Australia>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Country> <http://www.uliege.be/ontologies/2019/2/JO#Country9_Australia>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#country> <http://www.uliege.be/ontologies/2019/2/JO#Country9_Australia> "Australia")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Delegation10_Spain> (<http://www.uliege.be/ontologies/2019/2/JO#Delegation10_Spain>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Delegation> <http://www.uliege.be/ontologies/2019/2/JO#Delegation10_Spain>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Attend> <http://www.uliege.be/ontologies/2019/2/JO#Delegation10_Spain> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Represent> <http://www.uliege.be/ontologies/2019/2/JO#Delegation10_Spain> <http://www.uliege.be/ontologies/2019/2/JO#Country10_Spain>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Delegation11_Jamaica> (<http://www.uliege.be/ontologies/2019/2/JO#Delegation11_Jamaica>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Delegation> <http://www.uliege.be/ontologies/2019/2/JO#Delegation11_Jamaica>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Attend> <http://www.uliege.be/ontologies/2019/2/JO#Delegation11_Jamaica> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Represent> <http://www.uliege.be/ontologies/2019/2/JO#Delegation11_Jamaica> <http://www.uliege.be/ontologies/2019/2/JO#Country11_Jamaica>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Delegation12_Canada> (<http://www.uliege.be/ontologies/2019/2/JO#Delegation12_Canada>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Delegation> <http://www.uliege.be/ontologies/2019/2/JO#Delegation12_Canada>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Attend> <http://www.uliege.be/ontologies/2019/2/JO#Delegation12_Canada> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Represent> <http://www.uliege.be/ontologies/2019/2/JO#Delegation12_Canada> <http://www.uliege.be/ontologies/2019/2/JO#Country12_Canada>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Delegation13_SouthAfrica> (<http://www.uliege.be/ontologies/2019/2/JO#Delegation13_SouthAfrica>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Delegation> <http://www.uliege.be/ontologies/2019/2/JO#Delegation13_SouthAfrica>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Attend> <http://www.uliege.be/ontologies/2019/2/JO#Delegation13_SouthAfrica> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Represent> <http://www.uliege.be/ontologies/2019/2/JO#Delegation13_SouthAfrica> <http://www.uliege.be/ontologies/2019/2/JO#Country13_SouthAfrica>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Delegation14_IvoryCoast> (<http://www.uliege.be/ontologies/2019/2/JO#Delegation14_IvoryCoast>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Delegation> <http://www.uliege.be/ontologies/2019/2/JO#Delegation14_IvoryCoast>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Attend> <http://www.uliege.be/ontologies/2019/2/JO#Delegation14_IvoryCoast> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Represent> <http://www.uliege.be/ontologies/2019/2/JO#Delegation14_IvoryCoast> <http://www.uliege.be/ontologies/2019/2/JO#Country14_IvoryCoast>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Delegation1_Italy> (<http://www.uliege.be/ontologies/2019/2/JO#Delegation1_Italy>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Delegation> <http://www.uliege.be/ontologies/2019/2/JO#Delegation1_Italy>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Attend> <http://www.uliege.be/ontologies/2019/2/JO#Delegation1_Italy> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Represent> <http://www.uliege.be/ontologies/2019/2/JO#Delegation1_Italy> <http://www.uliege.be/ontologies/2019/2/JO#Country1_Italy>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Delegation2_France> (<http://www.uliege.be/ontologies/2019/2/JO#Delegation2_France>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Delegation> <http://www.uliege.be/ontologies/2019/2/JO#Delegation2_France>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Attend> <http://www.uliege.be/ontologies/2019/2/JO#Delegation2_France> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Represent> <http://www.uliege.be/ontologies/2019/2/JO#Delegation2_France> <http://www.uliege.be/ontologies/2019/2/JO#Country2_France>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Delegation3_Maroc> (<http://www.uliege.be/ontologies/2019/2/JO#Delegation3_Maroc>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Delegation> <http://www.uliege.be/ontologies/2019/2/JO#Delegation3_Maroc>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Attend> <http://www.uliege.be/ontologies/2019/2/JO#Delegation3_Maroc> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Represent> <http://www.uliege.be/ontologies/2019/2/JO#Delegation3_Maroc> <http://www.uliege.be/ontologies/2019/2/JO#Country3_Maroc>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Delegation4_US> (<http://www.uliege.be/ontologies/2019/2/JO#Delegation4_US>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Delegation> <http://www.uliege.be/ontologies/2019/2/JO#Delegation4_US>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Attend> <http://www.uliege.be/ontologies/2019/2/JO#Delegation4_US> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Represent> <http://www.uliege.be/ontologies/2019/2/JO#Delegation4_US> <http://www.uliege.be/ontologies/2019/2/JO#Country4_US>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Delegation5_GB> (<http://www.uliege.be/ontologies/2019/2/JO#Delegation5_GB>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Delegation> <http://www.uliege.be/ontologies/2019/2/JO#Delegation5_GB>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Attend> <http://www.uliege.be/ontologies/2019/2/JO#Delegation5_GB> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Represent> <http://www.uliege.be/ontologies/2019/2/JO#Delegation5_GB> <http://www.uliege.be/ontologies/2019/2/JO#Country5_GB>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Delegation6_Japan> (<http://www.uliege.be/ontologies/2019/2/JO#Delegation6_Japan>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Delegation> <http://www.uliege.be/ontologies/2019/2/JO#Delegation6_Japan>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Attend> <http://www.uliege.be/ontologies/2019/2/JO#Delegation6_Japan> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Represent> <http://www.uliege.be/ontologies/2019/2/JO#Delegation6_Japan> <http://www.uliege.be/ontologies/2019/2/JO#Country6_Japan>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Delegation7_Belgium> (<http://www.uliege.be/ontologies/2019/2/JO#Delegation7_Belgium>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Delegation> <http://www.uliege.be/ontologies/2019/2/JO#Delegation7_Belgium>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Attend> <http://www.uliege.be/ontologies/2019/2/JO#Delegation7_Belgium> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Represent> <http://www.uliege.be/ontologies/2019/2/JO#Delegation7_Belgium> <http://www.uliege.be/ontologies/2019/2/JO#Country7_Belgium>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Delegation8_China> (<http://www.uliege.be/ontologies/2019/2/JO#Delegation8_China>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Delegation> <http://www.uliege.be/ontologies/2019/2/JO#Delegation8_China>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Attend> <http://www.uliege.be/ontologies/2019/2/JO#Delegation8_China> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Represent> <http://www.uliege.be/ontologies/2019/2/JO#Delegation8_China> <http://www.uliege.be/ontologies/2019/2/JO#Country8_China>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Delegation9_Australia> (<http://www.uliege.be/ontologies/2019/2/JO#Delegation9_Australia>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Delegation> <http://www.uliege.be/ontologies/2019/2/JO#Delegation9_Australia>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Attend> <http://www.uliege.be/ontologies/2019/2/JO#Delegation9_Australia> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Represent> <http://www.uliege.be/ontologies/2019/2/JO#Delegation9_Australia> <http://www.uliege.be/ontologies/2019/2/JO#Country9_Australia>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Discipline1_Tennis_Double> (<http://www.uliege.be/ontologies/2019/2/JO#Discipline1_Tennis_Double>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Discipline> <http://www.uliege.be/ontologies/2019/2/JO#Discipline1_Tennis_Double>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#DisciplineOf> <http://www.uliege.be/ontologies/2019/2/JO#Discipline1_Tennis_Double> <http://www.uliege.be/ontologies/2019/2/JO#Sport4_Tennis>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Discipline1_Tennis_Double> "Doubles")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Discipline2_Tennis_Singles> (<http://www.uliege.be/ontologies/2019/2/JO#Discipline2_Tennis_Singles>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Discipline> <http://www.uliege.be/ontologies/2019/2/JO#Discipline2_Tennis_Singles>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#DisciplineOf> <http://www.uliege.be/ontologies/2019/2/JO#Discipline2_Tennis_Singles> <http://www.uliege.be/ontologies/2019/2/JO#Sport4_Tennis>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Discipline2_Tennis_Singles> "Singles")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Discipline3_Athletics_100M> (<http://www.uliege.be/ontologies/2019/2/JO#Discipline3_Athletics_100M>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Discipline> <http://www.uliege.be/ontologies/2019/2/JO#Discipline3_Athletics_100M>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#DisciplineOf> <http://www.uliege.be/ontologies/2019/2/JO#Discipline3_Athletics_100M> <http://www.uliege.be/ontologies/2019/2/JO#Sport3_Athletics>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Discipline3_Athletics_100M> "100M")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Final_Athletics_100M_Men> (<http://www.uliege.be/ontologies/2019/2/JO#Final_Athletics_100M_Men>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Match> <http://www.uliege.be/ontologies/2019/2/JO#Final_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#IsPartOf> <http://www.uliege.be/ontologies/2019/2/JO#Final_Athletics_100M_Men> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#JO2012> (<http://www.uliege.be/ontologies/2019/2/JO#JO2012>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#JO> <http://www.uliege.be/ontologies/2019/2/JO#JO2012>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Id> <http://www.uliege.be/ontologies/2019/2/JO#JO2012> "2"^^xsd:int)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#city> <http://www.uliege.be/ontologies/2019/2/JO#JO2012> "London")
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#country> <http://www.uliege.be/ontologies/2019/2/JO#JO2012> "Great Britain")
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#date> <http://www.uliege.be/ontologies/2019/2/JO#JO2012> "2012-07-27T00:00:00"^^xsd:dateTime)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#year> <http://www.uliege.be/ontologies/2019/2/JO#JO2012> "2012"^^xsd:int)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#JO2016> (<http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#JO> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Id> <http://www.uliege.be/ontologies/2019/2/JO#JO2016> "1"^^xsd:int)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#city> <http://www.uliege.be/ontologies/2019/2/JO#JO2016> "Rio de Janeiro")
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#country> <http://www.uliege.be/ontologies/2019/2/JO#JO2016> "Brazil")
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#date> <http://www.uliege.be/ontologies/2019/2/JO#JO2016> "2016-08-05T00:00:00"^^xsd:dateTime)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#year> <http://www.uliege.be/ontologies/2019/2/JO#JO2016> "2016"^^xsd:int)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Match1_Tennis_Double_Men_Random> (<http://www.uliege.be/ontologies/2019/2/JO#Match1_Tennis_Double_Men_Random>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Match> <http://www.uliege.be/ontologies/2019/2/JO#Match1_Tennis_Double_Men_Random>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#IsPartOf> <http://www.uliege.be/ontologies/2019/2/JO#Match1_Tennis_Double_Men_Random> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal1_Tennis_Double_Men>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Id> <http://www.uliege.be/ontologies/2019/2/JO#Match1_Tennis_Double_Men_Random> "1"^^xsd:int)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#city> <http://www.uliege.be/ontologies/2019/2/JO#Match1_Tennis_Double_Men_Random> "Rio de Janeiro")
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#date> <http://www.uliege.be/ontologies/2019/2/JO#Match1_Tennis_Double_Men_Random> "2016-08-15T09:10:00"^^xsd:dateTime)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Match1_Tennis_Double_Men_Random> "Match Double Men")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Ordeal1_Tennis_Double_Men> (<http://www.uliege.be/ontologies/2019/2/JO#Ordeal1_Tennis_Double_Men>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Ordeal> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal1_Tennis_Double_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Associate> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal1_Tennis_Double_Men> <http://www.uliege.be/ontologies/2019/2/JO#Discipline1_Tennis_Double>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#IsPartOf> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal1_Tennis_Double_Men> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#sexe> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal1_Tennis_Double_Men> "Men")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Ordeal2_Tennis_Double_Women> (<http://www.uliege.be/ontologies/2019/2/JO#Ordeal2_Tennis_Double_Women>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Ordeal> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal2_Tennis_Double_Women>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#sexe> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal2_Tennis_Double_Women> "Women")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men> (<http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Ordeal> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Associate> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men> <http://www.uliege.be/ontologies/2019/2/JO#Discipline3_Athletics_100M>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#IsPartOf> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#sexe> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal3_Athletics_100M_Men> "Men")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Record1_Tennis> (<http://www.uliege.be/ontologies/2019/2/JO#Record1_Tennis>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Record_Score> <http://www.uliege.be/ontologies/2019/2/JO#Record1_Tennis>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#RecordOf> <http://www.uliege.be/ontologies/2019/2/JO#Record1_Tennis> <http://www.uliege.be/ontologies/2019/2/JO#Discipline1_Tennis_Double>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Result1_team1_tennis> (<http://www.uliege.be/ontologies/2019/2/JO#Result1_team1_tennis>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Result> <http://www.uliege.be/ontologies/2019/2/JO#Result1_team1_tennis>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultMatch> <http://www.uliege.be/ontologies/2019/2/JO#Result1_team1_tennis> <http://www.uliege.be/ontologies/2019/2/JO#Match1_Tennis_Double_Men_Random>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Result1_team1_tennis> <http://www.uliege.be/ontologies/2019/2/JO#Team1_Tennis>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#rank> <http://www.uliege.be/ontologies/2019/2/JO#Result1_team1_tennis> "1"^^xsd:integer)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Result2_team2_tennis> (<http://www.uliege.be/ontologies/2019/2/JO#Result2_team2_tennis>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Result> <http://www.uliege.be/ontologies/2019/2/JO#Result2_team2_tennis>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultMatch> <http://www.uliege.be/ontologies/2019/2/JO#Result2_team2_tennis> <http://www.uliege.be/ontologies/2019/2/JO#Match1_Tennis_Double_Men_Random>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Result2_team2_tennis> <http://www.uliege.be/ontologies/2019/2/JO#Team2_Tennis>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#abandon> <http://www.uliege.be/ontologies/2019/2/JO#Result2_team2_tennis> "true"^^xsd:boolean)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Result_ADegrasse_Final_100m> (<http://www.uliege.be/ontologies/2019/2/JO#Result_ADegrasse_Final_100m>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Result> <http://www.uliege.be/ontologies/2019/2/JO#Result_ADegrasse_Final_100m>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultMatch> <http://www.uliege.be/ontologies/2019/2/JO#Result_ADegrasse_Final_100m> <http://www.uliege.be/ontologies/2019/2/JO#Final_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Result_ADegrasse_Final_100m> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AndreDegrasse>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#rank> <http://www.uliege.be/ontologies/2019/2/JO#Result_ADegrasse_Final_100m> "3"^^xsd:integer)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#time> <http://www.uliege.be/ontologies/2019/2/JO#Result_ADegrasse_Final_100m> "9.91"^^xsd:decimal)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Result_ASimbine_Final_100m> (<http://www.uliege.be/ontologies/2019/2/JO#Result_ASimbine_Final_100m>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Result> <http://www.uliege.be/ontologies/2019/2/JO#Result_ASimbine_Final_100m>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultMatch> <http://www.uliege.be/ontologies/2019/2/JO#Result_ASimbine_Final_100m> <http://www.uliege.be/ontologies/2019/2/JO#Final_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Result_ASimbine_Final_100m> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_AkaniSimbine>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#rank> <http://www.uliege.be/ontologies/2019/2/JO#Result_ASimbine_Final_100m> "5"^^xsd:integer)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#time> <http://www.uliege.be/ontologies/2019/2/JO#Result_ASimbine_Final_100m> "9.94"^^xsd:decimal)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Result_BYMeite_Final_100M> (<http://www.uliege.be/ontologies/2019/2/JO#Result_BYMeite_Final_100M>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Result> <http://www.uliege.be/ontologies/2019/2/JO#Result_BYMeite_Final_100M>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultMatch> <http://www.uliege.be/ontologies/2019/2/JO#Result_BYMeite_Final_100M> <http://www.uliege.be/ontologies/2019/2/JO#Final_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Result_BYMeite_Final_100M> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_BenYoussefMeite>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#rank> <http://www.uliege.be/ontologies/2019/2/JO#Result_BYMeite_Final_100M> "6"^^xsd:integer)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#time> <http://www.uliege.be/ontologies/2019/2/JO#Result_BYMeite_Final_100M> "9.96"^^xsd:decimal)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Result_JGATLIN_Final_100m> (<http://www.uliege.be/ontologies/2019/2/JO#Result_JGATLIN_Final_100m>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Result> <http://www.uliege.be/ontologies/2019/2/JO#Result_JGATLIN_Final_100m>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultMatch> <http://www.uliege.be/ontologies/2019/2/JO#Result_JGATLIN_Final_100m> <http://www.uliege.be/ontologies/2019/2/JO#Final_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Result_JGATLIN_Final_100m> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JustinGatlin>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#rank> <http://www.uliege.be/ontologies/2019/2/JO#Result_JGATLIN_Final_100m> "2"^^xsd:integer)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#time> <http://www.uliege.be/ontologies/2019/2/JO#Result_JGATLIN_Final_100m> "9.89"^^xsd:decimal)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Result_JVicaut_Final_100m> (<http://www.uliege.be/ontologies/2019/2/JO#Result_JVicaut_Final_100m>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Result> <http://www.uliege.be/ontologies/2019/2/JO#Result_JVicaut_Final_100m>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultMatch> <http://www.uliege.be/ontologies/2019/2/JO#Result_JVicaut_Final_100m> <http://www.uliege.be/ontologies/2019/2/JO#Final_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Result_JVicaut_Final_100m> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_JimmyVicaut>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#rank> <http://www.uliege.be/ontologies/2019/2/JO#Result_JVicaut_Final_100m> "7"^^xsd:integer)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#time> <http://www.uliege.be/ontologies/2019/2/JO#Result_JVicaut_Final_100m> "10.04"^^xsd:decimal)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Result_TBromell_Final_100m> (<http://www.uliege.be/ontologies/2019/2/JO#Result_TBromell_Final_100m>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Result> <http://www.uliege.be/ontologies/2019/2/JO#Result_TBromell_Final_100m>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultMatch> <http://www.uliege.be/ontologies/2019/2/JO#Result_TBromell_Final_100m> <http://www.uliege.be/ontologies/2019/2/JO#Final_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Result_TBromell_Final_100m> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_TrayvonBromell>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#rank> <http://www.uliege.be/ontologies/2019/2/JO#Result_TBromell_Final_100m> "8"^^xsd:integer)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#time> <http://www.uliege.be/ontologies/2019/2/JO#Result_TBromell_Final_100m> "10.06"^^xsd:decimal)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Result_UBolt_Final_100m> (<http://www.uliege.be/ontologies/2019/2/JO#Result_UBolt_Final_100m>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Result> <http://www.uliege.be/ontologies/2019/2/JO#Result_UBolt_Final_100m>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultMatch> <http://www.uliege.be/ontologies/2019/2/JO#Result_UBolt_Final_100m> <http://www.uliege.be/ontologies/2019/2/JO#Final_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Result_UBolt_Final_100m> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_UsainBolt>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#rank> <http://www.uliege.be/ontologies/2019/2/JO#Result_UBolt_Final_100m> "1"^^xsd:integer)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#time> <http://www.uliege.be/ontologies/2019/2/JO#Result_UBolt_Final_100m> "9.81"^^xsd:decimal)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Result_YBlake_Final_100m> (<http://www.uliege.be/ontologies/2019/2/JO#Result_YBlake_Final_100m>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Result> <http://www.uliege.be/ontologies/2019/2/JO#Result_YBlake_Final_100m>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultMatch> <http://www.uliege.be/ontologies/2019/2/JO#Result_YBlake_Final_100m> <http://www.uliege.be/ontologies/2019/2/JO#Final_Athletics_100M_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#ResultParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Result_YBlake_Final_100m> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_YohanBlake>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#rank> <http://www.uliege.be/ontologies/2019/2/JO#Result_YBlake_Final_100m> "4"^^xsd:integer)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#time> <http://www.uliege.be/ontologies/2019/2/JO#Result_YBlake_Final_100m> "9.93"^^xsd:decimal)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Sponsor1_CocaCola> (<http://www.uliege.be/ontologies/2019/2/JO#Sponsor1_CocaCola>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Sponsor> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor1_CocaCola>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Sponsors> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor1_CocaCola> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor1_CocaCola> "CocaCola")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Sponsor2_VISA> (<http://www.uliege.be/ontologies/2019/2/JO#Sponsor2_VISA>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Sponsor> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor2_VISA>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Sponsors> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor2_VISA> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor2_VISA> "VISA")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Sponsor3_GeneralElectric> (<http://www.uliege.be/ontologies/2019/2/JO#Sponsor3_GeneralElectric>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Sponsor> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor3_GeneralElectric>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Sponsors> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor3_GeneralElectric> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor3_GeneralElectric> "General Electric")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Sponsor4_Intel> (<http://www.uliege.be/ontologies/2019/2/JO#Sponsor4_Intel>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Sponsor> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor4_Intel>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Sponsors> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor4_Intel> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor4_Intel> "Intel")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Sponsor5_Samsung> (<http://www.uliege.be/ontologies/2019/2/JO#Sponsor5_Samsung>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Sponsor> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor5_Samsung>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Sponsors> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor5_Samsung> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor5_Samsung> "Samsung")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Sponsor6_AliBabaGroup> (<http://www.uliege.be/ontologies/2019/2/JO#Sponsor6_AliBabaGroup>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Sponsor> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor6_AliBabaGroup>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Sponsors> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor6_AliBabaGroup> <http://www.uliege.be/ontologies/2019/2/JO#JO2016>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Sponsor6_AliBabaGroup> "AliBaba Group")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Sport1_Swimming> (<http://www.uliege.be/ontologies/2019/2/JO#Sport1_Swimming>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Sport> <http://www.uliege.be/ontologies/2019/2/JO#Sport1_Swimming>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Sport1_Swimming> "Swimming")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Sport2_Boxing> (<http://www.uliege.be/ontologies/2019/2/JO#Sport2_Boxing>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Sport> <http://www.uliege.be/ontologies/2019/2/JO#Sport2_Boxing>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Sport2_Boxing> "Boxing")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Sport3_Athletics> (<http://www.uliege.be/ontologies/2019/2/JO#Sport3_Athletics>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Sport> <http://www.uliege.be/ontologies/2019/2/JO#Sport3_Athletics>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Sport3_Athletics> "Athletics")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Sport4_Tennis> (<http://www.uliege.be/ontologies/2019/2/JO#Sport4_Tennis>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Sport> <http://www.uliege.be/ontologies/2019/2/JO#Sport4_Tennis>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Sport4_Tennis> "Tennis")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Team1_Tennis> (<http://www.uliege.be/ontologies/2019/2/JO#Team1_Tennis>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Team> <http://www.uliege.be/ontologies/2019/2/JO#Team1_Tennis>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Compete> <http://www.uliege.be/ontologies/2019/2/JO#Team1_Tennis> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal1_Tennis_Double_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#From> <http://www.uliege.be/ontologies/2019/2/JO#Team1_Tennis> <http://www.uliege.be/ontologies/2019/2/JO#Country2_France>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Team1_Tennis> "Pierre-Hugues Herbert & Nicolas Mahut")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Team2_Tennis> (<http://www.uliege.be/ontologies/2019/2/JO#Team2_Tennis>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Team> <http://www.uliege.be/ontologies/2019/2/JO#Team2_Tennis>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Compete> <http://www.uliege.be/ontologies/2019/2/JO#Team2_Tennis> <http://www.uliege.be/ontologies/2019/2/JO#Ordeal1_Tennis_Double_Men>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#From> <http://www.uliege.be/ontologies/2019/2/JO#Team2_Tennis> <http://www.uliege.be/ontologies/2019/2/JO#Country10_Spain>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#name> <http://www.uliege.be/ontologies/2019/2/JO#Team2_Tennis> "Marc López & Rafael Nadal")
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#Usain_Bolt_example> (<http://www.uliege.be/ontologies/2019/2/JO#Usain_Bolt_example>)
+
+ClassAssertion(<#Participant> <http://www.uliege.be/ontologies/2019/2/JO#Usain_Bolt_example>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#WorldRecordParticipant> <http://www.uliege.be/ontologies/2019/2/JO#Usain_Bolt_example> <http://www.uliege.be/ontologies/2019/2/JO#200_m>)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#WorldRecord_Athletics_100m> (<http://www.uliege.be/ontologies/2019/2/JO#WorldRecord_Athletics_100m>)
+
+ClassAssertion(<http://www.uliege.be/ontologies/2019/2/JO#Record_Time> <http://www.uliege.be/ontologies/2019/2/JO#WorldRecord_Athletics_100m>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#RecordOf> <http://www.uliege.be/ontologies/2019/2/JO#WorldRecord_Athletics_100m> <http://www.uliege.be/ontologies/2019/2/JO#Discipline3_Athletics_100M>)
+ObjectPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#RecordParticipant> <http://www.uliege.be/ontologies/2019/2/JO#WorldRecord_Athletics_100m> <http://www.uliege.be/ontologies/2019/2/JO#Athlete2_UsainBolt>)
+DataPropertyAssertion(<http://www.uliege.be/ontologies/2019/2/JO#time> <http://www.uliege.be/ontologies/2019/2/JO#WorldRecord_Athletics_100m> "9.58"^^xsd:decimal)
+
+# Individual: <http://www.uliege.be/ontologies/2019/2/JO#200_m> (<http://www.uliege.be/ontologies/2019/2/JO#200_m>)
+
+ClassAssertion(<#World_Record> <http://www.uliege.be/ontologies/2019/2/JO#200_m>)
 
 
 )
